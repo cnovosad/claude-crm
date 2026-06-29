@@ -4691,6 +4691,10 @@ function submitLock() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (window.location.pathname.includes('group') || new URLSearchParams(window.location.search).get('w')) {
+    // Client portal - skip lock screen
+    return;
+  }
   if (sessionStorage.getItem('crm_unlocked') === '1') {
     init().then(() => { showTab('setup'); setTimeout(() => { showTab('setup'); loadInbox(); }, 500); });
   } else {
