@@ -1667,9 +1667,9 @@ function setShowMode(mode){
 }
 function toggleArchived(){ setShowMode('archived'); }
 
-function openCouplePortal(id){ window.open(`https://amy-cate.com/group.html?w=${id}`,'_blank'); }
+function openCouplePortal(id){ window.open(`https://christophercrm.pages.dev/group.html?w=${id}`,'_blank'); }
 function copyCoupleLink(id){
-  const url=`https://amy-cate.com/group.html?w=${id}`;
+  const url=`https://christophercrm.pages.dev/group.html?w=${id}`;
   navigator.clipboard.writeText(url).then(()=>alert('Couple link copied!\n\n'+url)).catch(()=>prompt('Copy this link:',url));
 }
 
@@ -3964,7 +3964,7 @@ ${AMY_SIGNATURE}`;
     progress.style.display = '';
     let sent=0, failed=0;
     for(const g of wGuests){
-      const flightLink = `https://amy-cate.com/flights.html?w=${currentWeddingId}&guest=${g.id}`;
+      const flightLink = `https://christophercrm.pages.dev/flights.html?w=${currentWeddingId}&guest=${g.id}`;
       const message = template.replace(/\[Name\]/g, g.names).replace(/\[Link\]/g, flightLink);
       progress.textContent = `Sending ${sent+failed+1} of ${wGuests.length} — ${g.names}…`;
       try{
@@ -3986,7 +3986,7 @@ async function sendGuestFlightEmail(guestId){
   const w = weddings.find(x=>x.id===currentWeddingId);
   if(!g||!w) return;
   const city = w.destination||'your destination';
-  const flightLink = `https://amy-cate.com/flights.html?w=${currentWeddingId}&guest=${guestId}`;
+  const flightLink = `https://christophercrm.pages.dev/flights.html?w=${currentWeddingId}&guest=${guestId}`;
   const message =
 `Hello ${g.names}!
 
