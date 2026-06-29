@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Amy Cate CRM</title>
+<title> Christopher CRM</title>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
@@ -224,7 +224,7 @@ tr:hover .sticky-col{background:#f8f8f8;}
 <!-- LOCK SCREEN -->
 <div id="app">
   <header autocomplete="off">
-    <div class="logo"> Amy Cate CRM <span id="weddingLabel" style="display:none;font-size:.82rem;font-weight:400;color:#aaa"></span></div>
+    <div class="logo"> Christopher CRM <span id="weddingLabel" style="display:none;font-size:.82rem;font-weight:400;color:#aaa"></span></div>
     <nav style="display:flex;flex-direction:column;align-items:center;gap:2px">
       <div style="display:flex;align-items:center;gap:4px">
         <button type="button" autocomplete="off" name="nav_weddings" class="nav-btn active" onclick="showTab('setup')" style="font-size:.95rem;font-weight:700;padding:4px 12px" data-noautofill="1">Active Events</button>
@@ -1984,7 +1984,7 @@ async function backupToDrive() {
 
     const backup = {
       exportedAt: new Date().toISOString(),
-      exportedBy: 'Amy Cate CRM',
+      exportedBy: 'Christopher CRM',
       version: 'v4',
       weddings:  wSnap.docs.map(d=>({id:d.id,...d.data()})),
       guests:    gSnap.docs.map(d=>({id:d.id,...d.data()})),
@@ -2535,7 +2535,7 @@ function generateGroupReport(filter) {
       <span>✦ ${w.weddingDate || ''}</span>
       <span>✦ Generated: ${new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
     </div>
-    <div style="font-size:.82rem;color:#ccc;">${wGuests.length} rooms · Amy M. Cate · Destination Weddings Travel Group & Celebration Travel</div></div>
+    <div style="font-size:.82rem;color:#ccc;">${wGuests.length} rooms · Amy M. Cate · Christopher CRM & Celebration Travel</div></div>
     <div class="summary">
       <div class="stat"><div class="label">Rooms</div><div class="val">${wGuests.length}</div></div>
       <div class="stat"><div class="label">Total Cost</div><div class="val">${fmt(totalRoom + totalIns)}</div></div>
@@ -2616,7 +2616,7 @@ function generateRoomListingReport(filter){
     + '<span> '+(w.destination||'')+'</span>'
     + '<span> '+(w.weddingDate||'')+'</span>'
     + '<span> Generated: '+new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})+'</span></div>'
-    + '<div class="sub">'+wGuests.length+' rooms &middot; Amy M. Cate &middot; Destination Weddings Travel Group &amp; Celebration Travel</div></div>'
+    + '<div class="sub">'+wGuests.length+' rooms &middot; Amy M. Cate &middot; Christopher CRM &amp; Celebration Travel</div></div>'
     + '<table><thead><tr>'
     + '<th>Res #</th><th>Guest(s)</th><th>Arrival</th><th>Departure</th><th>Room Category</th><th>Notes</th>'
     + '</tr></thead><tbody>'+rows+'</tbody></table>'
@@ -3897,7 +3897,7 @@ ${(()=>{
 // ════════════════════════════════════
 const AMY_SIGNATURE = `Amy M. Cate
 Certified Destination Wedding & Group Travel Specialist
-Destination Weddings Travel Group & Celebration Travel
+Christopher CRM & Celebration Travel
 (832) 773-8664
 Book a call with me: zcal.co/amymcate/letschat
 Office Hours: Monday–Thursday 9:00am–5:00pm, Friday 9:00am–3:00pm CST
@@ -4660,8 +4660,8 @@ function showLockScreen() {
     lock.style.cssText = 'position:fixed;inset:0;background:#1a1a1a;display:flex;align-items:center;justify-content:center;z-index:99999;';
     lock.innerHTML = `<div style="text-align:center;color:white;">
       <div style="font-size:2rem;margin-bottom:8px">🔐</div>
-      <div style="font-family:serif;font-size:1.3rem;color:#c9a96e;margin-bottom:4px">✦ Amy Cate CRM</div>
-      <div style="font-size:.85rem;color:#888;margin-bottom:24px">Destination Weddings Travel Group</div>
+      <div style="font-family:serif;font-size:1.3rem;color:#c9a96e;margin-bottom:4px">✦ Christopher CRM</div>
+      <div style="font-size:.85rem;color:#888;margin-bottom:24px">Christopher CRM</div>
       <input id="crm-pw-input" type="password" placeholder="Enter password" autofocus
         style="width:260px;padding:12px 16px;border-radius:8px;border:1px solid #444;background:#111;color:white;font-size:1rem;text-align:center;outline:none;display:block;margin:0 auto 12px;">
       <button onclick="submitLock()"
