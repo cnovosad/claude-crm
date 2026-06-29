@@ -62,8 +62,8 @@ main{padding:20px;max-width:1400px;margin:0 auto;min-height:calc(100vh - 60px);c
 .btn-primary:hover{background:#333 !important;}
 .btn-outline{background:var(--surface) !important;border:1px solid #999 !important;color:var(--text) !important;}
 .btn-outline:hover{border-color:#1a1a1a !important;color:#1a1a1a !important;background:var(--surface2) !important;}
-.btn-danger{background:#fff0f0 !important;border:1px solid #cc8888 !important;color:#8a1a1a !important;}
-.btn-danger:hover{background:#fdf0f0 !important;}
+.btn-danger{background:#3a0a0a !important;border:1px solid #FF6B6B !important;color:#FF6B6B !important;}
+.btn-danger:hover{background:#3a0a0a !important;}
 .btn-sm{padding:4px 9px;font-size:.88rem;}
 
 /* MODAL */
@@ -551,15 +551,15 @@ tr:hover .sticky-col{background:var(--surface2);}
           </div>
 
           <button onclick="qbGenerate()" id="qb-gen-btn" style="width:100%;padding:14px;background:var(--surface);color:white;border:none;border-radius:10px;font-size:.95rem;font-weight:700;cursor:pointer;margin-bottom:6px" disabled> Generate Quote →</button>
-          <p style="text-align:center;font-size:.75rem;color:#888">Select resort, guest name, and at least one room option</p>
+          <p style="text-align:center;font-size:.75rem;color:var(--muted)">Select resort, guest name, and at least one room option</p>
         </div>
 
         <!-- RIGHT PANEL: PREVIEW -->
         <div id="qb-preview-panel" style="position:sticky;top:80px">
-          <div style="background:#f5f5f7;border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center" id="qb-empty-state">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center" id="qb-empty-state">
             <div style="font-size:3rem;margin-bottom:12px">📄</div>
             <div style="font-weight:700;color:var(--text);margin-bottom:6px">Your quote preview will appear here</div>
-            <div style="font-size:.85rem;color:#888">Fill in the form and click Generate Quote</div>
+            <div style="font-size:.85rem;color:var(--muted)">Fill in the form and click Generate Quote</div>
           </div>
           <div id="qb-preview-container" style="display:none">
             <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
@@ -576,8 +576,8 @@ tr:hover .sticky-col{background:var(--surface2);}
       <div id="qb-resort-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;display:none;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto">
         <div style="background:var(--surface);border-radius:14px;padding:28px;width:600px;max-width:95vw;margin:auto">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
-            <h3 id="qb-resort-modal-title" style="font-size:1rem;font-weight:700;color:#1a1a1a">+ Add Resort</h3>
-            <button onclick="qbCloseResortModal()" style="background:none;border:none;font-size:1.4rem;cursor:pointer;color:#888">✕</button>
+            <h3 id="qb-resort-modal-title" style="font-size:1rem;font-weight:700;color:var(--text)">+ Add Resort</h3>
+            <button onclick="qbCloseResortModal()" style="background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--muted)">✕</button>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
             <div><label class="form-label">Resort Name *</label><input id="qb-nr-name" class="form-input" placeholder="e.g. Sandals Royal Barbados"></div>
@@ -588,7 +588,7 @@ tr:hover .sticky-col{background:var(--surface2);}
           <div style="margin-bottom:12px"><label class="form-label">About *</label><textarea id="qb-nr-about" class="form-input" rows="3" placeholder="A vibrant adults-only resort featuring..."></textarea></div>
           <div style="margin-bottom:12px"><label class="form-label">Highlights (one per line)</label><textarea id="qb-nr-highlights" class="form-input" rows="4" placeholder="Adults Only (18+)&#10;Multiple Pools&#10;Private Beach&#10;World-Class Spa"></textarea></div>
           <div style="margin-bottom:12px"><label class="form-label">Special Note (optional)</label><input id="qb-nr-note" class="form-input" placeholder="e.g. Plus unlimited access to Dreams next door..."></div>
-          <div style="background:#f9f5ee;border:1px solid #e8dcc8;border-radius:10px;padding:14px;margin-bottom:12px">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:12px">
             <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#b8973a;margin-bottom:10px">&#x1F4F7; Photos</div>
             <div style="margin-bottom:10px"><label class="form-label">1. Hero Photo URL</label><input id="qb-nr-photo" class="form-input" placeholder="Main banner photo — paste URL or Drive share link"></div>
             <div><label class="form-label">2. Resort Photos <span style="font-weight:400;color:var(--muted);font-size:.8rem">(one URL per line — pool, beach, lobby, etc.)</span></label><textarea id="qb-nr-resort-photos" class="form-input" rows="3" placeholder="https://...&#10;https://...&#10;https://..."></textarea></div>
@@ -611,8 +611,8 @@ tr:hover .sticky-col{background:var(--surface2);}
       <div id="qb-manage-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:center;justify-content:center;padding:20px">
         <div style="background:var(--surface);border-radius:14px;padding:28px;width:580px;max-width:95vw;max-height:80vh;display:flex;flex-direction:column">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-            <h3 style="font-size:1rem;font-weight:700;color:#1a1a1a">✎ Manage Resorts</h3>
-            <button onclick="document.getElementById('qb-manage-modal').style.display='none'" style="background:none;border:none;font-size:1.4rem;cursor:pointer;color:#888">✕</button>
+            <h3 style="font-size:1rem;font-weight:700;color:var(--text)">✎ Manage Resorts</h3>
+            <button onclick="document.getElementById('qb-manage-modal').style.display='none'" style="background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--muted)">✕</button>
           </div>
           <div id="qb-manage-list" style="overflow-y:auto;flex:1"></div>
         </div>
@@ -622,9 +622,9 @@ tr:hover .sticky-col{background:var(--surface2);}
       <div class="section-head">
         <div><h2>&#x1F4C5; Timeline</h2><p>All upcoming events</p></div>
         <div style="display:flex;gap:6px;align-items:center">
-          <button id="tl-btn-past" onclick="toggleTimelinePast()" style="padding:6px 12px;border:1px solid var(--border);border-radius:6px;font-size:.78rem;font-weight:600;cursor:pointer;background:var(--surface);color:#888">Show Past</button>
+          <button id="tl-btn-past" onclick="toggleTimelinePast()" style="padding:6px 12px;border:1px solid var(--border);border-radius:6px;font-size:.78rem;font-weight:600;cursor:pointer;background:var(--surface);color:var(--muted)">Show Past</button>
           <button id="tl-btn-list" onclick="setTimelineView('list')" style="padding:6px 14px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;font-weight:600;cursor:pointer;background:var(--surface);color:white">&#9776; List</button>
-          <button id="tl-btn-quarter" onclick="setTimelineView('quarter')" style="padding:6px 14px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;font-weight:600;cursor:pointer;background:var(--surface);color:#1a1a1a">&#9783; Quarterly</button>
+          <button id="tl-btn-quarter" onclick="setTimelineView('quarter')" style="padding:6px 14px;border:1px solid var(--border);border-radius:6px;font-size:.82rem;font-weight:600;cursor:pointer;background:var(--surface);color:var(--text)">&#9783; Quarterly</button>
         </div>
       </div>
       <div id="timelineContainer" style="max-width:700px;margin:0 auto;padding:10px 0"></div>
@@ -1476,11 +1476,11 @@ function renderWeddingGrid(){
       <div style="margin-bottom:8px;min-height:18px">${w.portalProvided?'<span style="background:#f0f8f2;border:1px solid #a8cca8;color:#1a5c2a;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:10px">&#10003; Portal Sent</span>':''}</div>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:14px;border-top:1px solid #eee;padding-top:12px">
         <div style="text-align:center">
-          <div style="font-size:1.3rem;font-weight:700;color:#1a1a1a">${rooms}</div>
+          <div style="font-size:1.3rem;font-weight:700;color:var(--text)">${rooms}</div>
           <div style="font-size:.72rem;color:var(--muted);text-transform:uppercase;margin-top:2px">Rooms</div>
         </div>
         <div style="text-align:center">
-          <div style="font-size:1.3rem;font-weight:700;color:#1a1a1a">${guestCount}</div>
+          <div style="font-size:1.3rem;font-weight:700;color:var(--text)">${guestCount}</div>
           <div style="font-size:.72rem;color:var(--muted);text-transform:uppercase;margin-top:2px">Guests</div>
         </div>
         <div style="text-align:center">
@@ -2405,9 +2405,9 @@ function renderReports(){
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px 36px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.06)">
       <div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:6px">${selYr}</div>
       <div style="display:flex;gap:8px;align-items:center;margin-bottom:28px">
-        <div style="font-size:.85rem;color:#888">${d.groups} events</div>
+        <div style="font-size:.85rem;color:var(--muted)">${d.groups} events</div>
         <div style="color:#ccc">&middot;</div>
-        <div style="font-size:.85rem;color:#888">${d.passengers} passengers</div>
+        <div style="font-size:.85rem;color:var(--muted)">${d.passengers} passengers</div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
         <div>
@@ -2420,7 +2420,7 @@ function renderReports(){
         </div>
       </div>
       ${!isProjected ? `<div style="margin-top:24px">
-        <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:.82rem;color:#888"><span>Collection progress</span><span style="font-weight:700;color:${pct>=100?'#4caf88':'#1B2B4B'}">${pct}%</span></div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:.82rem;color:var(--muted)"><span>Collection progress</span><span style="font-weight:700;color:${pct>=100?'#4caf88':'#1B2B4B'}">${pct}%</span></div>
         <div style="background:var(--surface2);border-radius:8px;height:10px;overflow:hidden"><div style="width:${Math.min(pct,100)}%;height:100%;background:${pct>=100?'#4caf88':'#c9a96e'};border-radius:8px"></div></div>
       </div>` : ''}
     </div>
@@ -2667,10 +2667,10 @@ function renderTimelineQuarter(cont, weddings, guests){
       const d = new Date(w.weddingDate+'T12:00:00');
       const daysOut = Math.ceil((d-today)/86400000);
       const color = daysOut<=30?'#c85a00':daysOut<=60?'#856a00':'#1a5c2a';
-      return `<div onclick="openWeddingDetail('${w.id}')" style="padding:8px 10px;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .1s" onmouseover="this.style.background='#f9f9f9'" onmouseout="this.style.background='white'">
-        <div style="font-size:.82rem;font-weight:700;color:#1a1a1a">${fmtDate(w.weddingDate)} <span style="color:${color};font-size:.72rem">${daysOut}d</span></div>
+      return `<div onclick="openWeddingDetail('${w.id}')" style="padding:8px 10px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s" onmouseover="this.style.background='var(--surface2)'" onmouseout="this.style.background='var(--surface)'">
+        <div style="font-size:.82rem;font-weight:700;color:var(--text)">${fmtDate(w.weddingDate)} <span style="color:${color};font-size:.72rem">${daysOut}d</span></div>
         <div style="font-size:.88rem;font-weight:700;color:var(--text);margin-top:1px">${esc(w.names)}</div>
-        ${w.resort?`<div style="font-size:.75rem;color:#888">${esc(w.resort)}</div>`:''}
+        ${w.resort?`<div style="font-size:.75rem;color:var(--muted)">${esc(w.resort)}</div>`:''}
         <div style="font-size:.72rem;color:var(--muted);margin-top:2px">${guestCount} guests &middot; ${wGuests.length} rooms</div>
       </div>`;
     }).join('');
@@ -2724,18 +2724,18 @@ function renderTimeline(){
       <div style="flex:1;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:12px;transition:box-shadow .15s" onmouseover="this.style.boxShadow='0 2px 12px rgba(0,0,0,.1)'" onmouseout="this.style.boxShadow='none'">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
           <div>
-            <div style="font-size:1.05rem;font-weight:700;color:#1a1a1a">${esc(w.names)}</div>
+            <div style="font-size:1.05rem;font-weight:700;color:var(--text)">${esc(w.names)}</div>
             ${w.resort?`<div style="font-size:.82rem;color:var(--muted);margin-top:2px">${esc(w.resort)}</div>`:''}
             ${w.destination?`<div style="font-size:.78rem;color:#aaa">${esc(w.destination)}</div>`:''}
           </div>
           <div style="text-align:right;flex-shrink:0;margin-left:12px">
-            <div style="font-size:.85rem;font-weight:700;color:#1a1a1a">${fmtDate(w.weddingDate)}</div>
+            <div style="font-size:.85rem;font-weight:700;color:var(--text)">${fmtDate(w.weddingDate)}</div>
             <div style="font-size:.75rem;font-weight:700;color:${dotColor};margin-top:2px">${daysLabel}</div>
           </div>
         </div>
         <div style="display:flex;gap:16px;margin-top:10px;padding-top:10px;border-top:1px solid #f0f0f0">
-          <span style="font-size:.82rem;color:#666"><strong style="color:#1a1a1a">${wGuests.length}</strong> Rooms</span>
-          <span style="font-size:.82rem;color:#666"><strong style="color:#1a1a1a">${guestCount}</strong> Guests</span>
+          <span style="font-size:.82rem;color:#666"><strong style="color:var(--text)">${wGuests.length}</strong> Rooms</span>
+          <span style="font-size:.82rem;color:#666"><strong style="color:var(--text)">${guestCount}</strong> Guests</span>
           ${outstanding>0?`<span style="font-size:.82rem;color:#8a1a1a"><strong>$${fmt(outstanding)}</strong> Owed</span>`:'<span style="font-size:.82rem;color:#2a7a4a">✓ Paid up</span>'}
         </div>
       </div>
@@ -2781,11 +2781,11 @@ function renderLeads(){
       <td class="sticky-col">
         <button onclick="event.stopPropagation();toggleLeadMenu('${l.id}',this)" style="background:var(--surface);border:1px solid #444;color:white;font-size:.85rem;font-weight:700;padding:5px 12px;border-radius:6px;cursor:pointer">⋯</button>
         <div id="leadMenu_${l.id}" style="display:none;position:fixed;background:var(--surface);border:1px solid var(--border);border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.2);z-index:9999;min-width:150px;padding:4px 0">
-          <div onclick="editLead('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:var(--text);font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">✏️ Edit</div>
-          <div onclick="openIntakeModal('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:#2a5a8a;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">📋 Send Intake</div>
-          <div onclick="viewResponses('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:#7a3a8a;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">👁 View Responses</div>
-          <div onclick="moveLeadToActive('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:#4ADE80;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">🎉 Activate</div>
-          <div onclick="deleteLead('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:#FF6B6B;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#fff0f0'" onmouseout="this.style.background='white'">✕ Delete</div>
+          <div onclick="editLead('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:var(--text);font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='var(--surface2)'" onmouseout="this.style.background='var(--surface)'">✏️ Edit</div>
+          <div onclick="openIntakeModal('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:#2a5a8a;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='var(--surface2)'" onmouseout="this.style.background='var(--surface)'">📋 Send Intake</div>
+          <div onclick="viewResponses('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:#7a3a8a;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='var(--surface2)'" onmouseout="this.style.background='var(--surface)'">👁 View Responses</div>
+          <div onclick="moveLeadToActive('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:#4ADE80;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='var(--surface2)'" onmouseout="this.style.background='var(--surface)'">🎉 Activate</div>
+          <div onclick="deleteLead('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:#FF6B6B;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#fff0f0'" onmouseout="this.style.background='var(--surface)'">✕ Delete</div>
         </div>
       </td>
     </tr>`;
@@ -2920,14 +2920,14 @@ function renderDetailGuests(){
     <div style="position:relative;display:inline-block">
       <button onclick="toggleRowMenu('${g.id}', event)" style="background:var(--surface);border:none;color:white;font-size:1.2rem;width:32px;height:32px;border-radius:6px;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center">⋮</button>
       <div id="rowMenu_${g.id}" style="display:none;position:fixed;background:var(--surface);border:1px solid var(--border);border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.2);z-index:9999;min-width:130px;padding:4px 0">
-        <div onclick="editGuest('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:var(--text);font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">✏️ Edit</div>
-        <div onclick="openFlightModal('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:var(--text);font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">✈️ Flight</div>
-        <div onclick="openGuestPayModal('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:#4ADE80;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">💰 Pay</div>
-        ${g.email?`<div onclick="sendGuestFlightEmail('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:var(--text);font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">📧 Email</div>`:''}
+        <div onclick="editGuest('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:var(--text);font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='var(--surface2)'" onmouseout="this.style.background='var(--surface)'">✏️ Edit</div>
+        <div onclick="openFlightModal('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:var(--text);font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='var(--surface2)'" onmouseout="this.style.background='var(--surface)'">✈️ Flight</div>
+        <div onclick="openGuestPayModal('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:#4ADE80;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='var(--surface2)'" onmouseout="this.style.background='var(--surface)'">💰 Pay</div>
+        ${g.email?`<div onclick="sendGuestFlightEmail('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:var(--text);font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='var(--surface2)'" onmouseout="this.style.background='var(--surface)'">📧 Email</div>`:''}
         <div style="border-top:1px solid #eee;margin:4px 0"></div>
         ${g.status!=='Cancelled'
-          ?`<div onclick="cancelGuest('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:#FF6B6B;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#fff0f0'" onmouseout="this.style.background='white'">🚫 Cancel</div>`
-          :`<div onclick="reinstateGuest('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:#4ADE80;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f0fff0'" onmouseout="this.style.background='white'">↩ Restore</div>`}
+          ?`<div onclick="cancelGuest('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:#FF6B6B;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#fff0f0'" onmouseout="this.style.background='var(--surface)'">🚫 Cancel</div>`
+          :`<div onclick="reinstateGuest('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:#4ADE80;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f0fff0'" onmouseout="this.style.background='var(--surface)'">↩ Restore</div>`}
       </div>
     </div>
   </td>`;
@@ -3443,7 +3443,7 @@ function flightPersonSection(name, idx, type, defaultDate, existingData){
 
   return `<div style="background:${bg};border:1px solid ${border};border-radius:8px;padding:14px;margin-bottom:10px">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
-      <div style="font-size:.85rem;font-weight:700;color:#1a1a1a">${label} — ${esc(name)}</div>
+      <div style="font-size:.85rem;font-weight:700;color:var(--text)">${label} — ${esc(name)}</div>
       ${copyBtn}
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
@@ -3798,7 +3798,7 @@ function generateFlightReport(){
   .header h1{font-size:1.4rem;margin:0 0 4px;}
   .header p{color:var(--muted);margin:0;font-size:.9rem;}
   .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;}
-  .meta-card{background:#f4f4f4;border-radius:6px;padding:12px;border:1px solid var(--border);}
+  .meta-card{background:var(--surface2);border-radius:6px;padding:12px;border:1px solid var(--border);}
   .meta-card .label{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:3px;}
   .meta-card .value{font-size:.95rem;font-weight:600;}
   table{width:100%;border-collapse:collapse;margin-bottom:20px;}
@@ -3848,7 +3848,7 @@ ${(()=>{
 
     const deptHtml = deptGroups.map(dg =>
       '<div style="margin-bottom:3px">'
-      + (dg.names.length < persons.length ? '<span style="font-size:.78rem;color:#888">'+dg.names.join(', ')+': </span>' : '')
+      + (dg.names.length < persons.length ? '<span style="font-size:.78rem;color:var(--muted)">'+dg.names.join(', ')+': </span>' : '')
       + (dg.flight.flight ? '<strong>'+dg.flight.flight+'</strong>' : '<span class="no-flight">Not provided</span>')
       + (dg.flight.date ? ' &middot; '+fmtD(dg.flight.date) : '')
       + (dg.flight.time ? ' &middot; '+dg.flight.time : '')
@@ -3935,7 +3935,7 @@ ${AMY_SIGNATURE}`;
   overlay.innerHTML = `
     <div style="background:var(--surface);border-radius:14px;padding:28px;width:620px;max-width:95vw;max-height:90vh;overflow-y:auto;box-shadow:0 8px 40px rgba(0,0,0,.3)">
       <h3 style="font-size:1rem;font-weight:700;color:var(--text);margin-bottom:6px">📧 Send Flight Request</h3>
-      <p style="font-size:.88rem;color:var(--muted);margin-bottom:16px">Sending to <strong>${wGuests.length} guest${wGuests.length>1?'s':''}</strong> — <span style="color:#888">[Name]</span> and <span style="color:#888">[Link]</span> will be personalized per guest automatically.</p>
+      <p style="font-size:.88rem;color:var(--muted);margin-bottom:16px">Sending to <strong>${wGuests.length} guest${wGuests.length>1?'s':''}</strong> — <span style="color:var(--muted)">[Name]</span> and <span style="color:var(--muted)">[Link]</span> will be personalized per guest automatically.</p>
       <div style="margin-bottom:14px">
         <label style="display:block;font-size:.82rem;font-weight:700;color:var(--muted);margin-bottom:6px">Subject</label>
         <input id="flightEmailSubject" type="text" value="Flight Details Needed — ${coupleNames} Wedding!" style="width:100%;padding:9px 12px;border:1px solid var(--border);border-radius:7px;font-size:.93rem;font-family:inherit">
@@ -4155,7 +4155,7 @@ async function viewResponsesByWedding(weddingId) {
       return '<div style="border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:14px">'
         + '<div style="display:flex;justify-content:space-between;margin-bottom:8px">'
         + '<strong>' + esc(d.firstName||'') + ' ' + esc(d.lastName||'') + '</strong>'
-        + '<span style="font-size:.8rem;color:#888">' + date + '</span></div>'
+        + '<span style="font-size:.8rem;color:var(--muted)">' + date + '</span></div>'
         + '<div style="font-size:.85rem;color:var(--muted);line-height:1.7">'
         + (d.email ? '✉️ ' + esc(d.email) + '<br>' : '')
         + (d.phone ? '📞 ' + esc(d.phone) + '<br>' : '')
@@ -4244,21 +4244,21 @@ async function viewResponses(leadId) {
     list.innerHTML = snap.docs.map(doc => {
       const d = doc.data();
       const date = d.submittedAt ? new Date(d.submittedAt).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'}) : '&mdash;';
-      const notesHtml = d.notes ? '<div style="margin-top:10px;padding:10px;background:var(--surface2);border-radius:6px;font-size:.86rem;color:#555"><span style="color:#888">Notes:</span> ' + esc(d.notes) + '</div>' : '';
+      const notesHtml = d.notes ? '<div style="margin-top:10px;padding:10px;background:var(--surface2);border-radius:6px;font-size:.86rem;color:#555"><span style="color:var(--muted)">Notes:</span> ' + esc(d.notes) + '</div>' : '';
       return '<div style="border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:14px">'
         + '<div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:10px">'
         + '<strong style="font-size:1rem">' + esc(d.firstName||'') + ' ' + esc(d.lastName||'') + '</strong>'
-        + '<span style="font-size:.78rem;color:#888">' + date + '</span>'
+        + '<span style="font-size:.78rem;color:var(--muted)">' + date + '</span>'
         + '</div>'
         + '<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:.88rem;color:#444">'
-        + '<div><span style="color:#888">Email:</span> ' + esc(d.email||'&mdash;') + '</div>'
-        + '<div><span style="color:#888">Phone:</span> ' + esc(d.phone||'&mdash;') + '</div>'
-        + '<div><span style="color:#888">Room:</span> ' + esc(d.roomPreference||'&mdash;') + '</div>'
-        + '<div><span style="color:#888">Travelers:</span> ' + esc(d.numTravelers||'&mdash;') + '</div>'
-        + '<div><span style="color:#888">Rooming with:</span> ' + esc(d.roomingWith||'&mdash;') + '</div>'
-        + '<div><span style="color:#888">Check-in:</span> ' + esc(d.checkinDate||'Group date') + '</div>'
-        + '<div><span style="color:#888">Nights:</span> ' + esc(d.nights||'&mdash;') + '</div>'
-        + '<div><span style="color:#888">Check-out:</span> ' + esc(d.checkoutDate||'Group date') + '</div>'
+        + '<div><span style="color:var(--muted)">Email:</span> ' + esc(d.email||'&mdash;') + '</div>'
+        + '<div><span style="color:var(--muted)">Phone:</span> ' + esc(d.phone||'&mdash;') + '</div>'
+        + '<div><span style="color:var(--muted)">Room:</span> ' + esc(d.roomPreference||'&mdash;') + '</div>'
+        + '<div><span style="color:var(--muted)">Travelers:</span> ' + esc(d.numTravelers||'&mdash;') + '</div>'
+        + '<div><span style="color:var(--muted)">Rooming with:</span> ' + esc(d.roomingWith||'&mdash;') + '</div>'
+        + '<div><span style="color:var(--muted)">Check-in:</span> ' + esc(d.checkinDate||'Group date') + '</div>'
+        + '<div><span style="color:var(--muted)">Nights:</span> ' + esc(d.nights||'&mdash;') + '</div>'
+        + '<div><span style="color:var(--muted)">Check-out:</span> ' + esc(d.checkoutDate||'Group date') + '</div>'
         + '</div>'
         + notesHtml
         + '<div style="display:flex;justify-content:flex-end;margin-top:10px">'
@@ -4565,7 +4565,7 @@ function showInboxIntakeDetail(id, data){
   const rows = fields.map(([label, value]) => `
     <div style="display:flex;gap:12px;padding:8px 0;border-bottom:1px solid #f0f0f0">
       <div style="font-size:.82rem;font-weight:700;color:var(--muted);min-width:140px;flex-shrink:0">${label}</div>
-      <div style="font-size:.88rem;color:#1a1a1a">${esc(String(value))}</div>
+      <div style="font-size:.88rem;color:var(--text)">${esc(String(value))}</div>
     </div>`).join('');
 
   // Remove existing if open
@@ -4602,7 +4602,7 @@ function showInboxEmailDetail(id, data){
       <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px">
         <div>
           <h3 style="font-size:1rem;font-weight:700;color:var(--text);margin-bottom:4px">${esc(data.subject||'(no subject)')}</h3>
-          <div style="font-size:.83rem;color:#888">From: ${esc(data.from||'')} · ${data.receivedAt?fmtTimeAgo(data.receivedAt):''}</div>
+          <div style="font-size:.83rem;color:var(--muted)">From: ${esc(data.from||'')} · ${data.receivedAt?fmtTimeAgo(data.receivedAt):''}</div>
         </div>
         <button onclick="this.closest('div[style*=fixed]').remove()" style="background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--muted);padding:0 0 0 16px">✕</button>
       </div>
