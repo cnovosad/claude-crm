@@ -38,12 +38,12 @@ header{background:#1a1a1a;border-bottom:1px solid #333;padding:12px 20px;display
 .logo{color:white;font-size:1rem;font-weight:700;letter-spacing:.04em;}
 .logo span{color:var(--muted);font-weight:400;font-size:.9rem;margin-left:8px;}
 nav{display:flex;gap:3px;flex-wrap:wrap;}
-.nav-btn{background:none;border:none;color:#aaa;font-size:.92rem;padding:7px 14px;border-radius:6px;cursor:pointer;transition:all .15s;}
+.nav-btn{background:none;border:none;color:var(--muted);font-size:.92rem;padding:7px 14px;border-radius:6px;cursor:pointer;transition:all .15s;}
 .nav-btn:hover,.nav-btn.active{background:var(--surface2);color:var(--text);}
 .nav-btn.active{color:white;font-weight:700;}
 .header-right{display:flex;align-items:center;gap:8px;}
 .wedding-selector{background:#2a2a2a;border:1px solid #444;color:white;padding:7px 10px;border-radius:6px;font-size:.92rem;}
-.lock-btn{background:none;border:1px solid #444;color:#aaa;padding:6px 10px;border-radius:6px;font-size:.9rem;cursor:pointer;}
+.lock-btn{background:none;border:1px solid #444;color:var(--muted);padding:6px 10px;border-radius:6px;font-size:.9rem;cursor:pointer;}
 .lock-btn:hover{color:white;}
 main{padding:20px;max-width:1400px;margin:0 auto;min-height:calc(100vh - 60px);color:white;}
 
@@ -60,7 +60,7 @@ main{padding:20px;max-width:1400px;margin:0 auto;min-height:calc(100vh - 60px);c
 .btn{padding:8px 14px;border-radius:6px;font-size:.92rem;cursor:pointer;border:none;font-weight:600;transition:all .15s;display:inline-flex;align-items:center;gap:5px;}
 .btn-primary{background:#1a1a1a !important;color:white !important;}
 .btn-primary:hover{background:#333 !important;}
-.btn-outline{background:var(--surface) !important;border:1px solid #999 !important;color:#1B2B4B !important;}
+.btn-outline{background:var(--surface) !important;border:1px solid #999 !important;color:var(--text) !important;}
 .btn-outline:hover{border-color:#1a1a1a !important;color:#1a1a1a !important;background:var(--surface2) !important;}
 .btn-danger{background:#fff0f0 !important;border:1px solid #cc8888 !important;color:#8a1a1a !important;}
 .btn-danger:hover{background:#fdf0f0 !important;}
@@ -98,7 +98,7 @@ main{padding:20px;max-width:1400px;margin:0 auto;min-height:calc(100vh - 60px);c
 table{width:100%;border-collapse:collapse;font-size:1rem;}
 thead{background:#1a1a1a;position:sticky;top:0;z-index:10;}
 th{padding:11px 13px;text-align:left;color:#ffffff;font-weight:600;font-size:.95rem;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;}
-td{padding:9px 10px;border-top:1px solid var(--border);vertical-align:middle;color:#1B2B4B !important;font-size:.9rem;}
+td{padding:9px 10px;border-top:1px solid var(--border);vertical-align:middle;color:var(--text) !important;font-size:.9rem;}
 tr:hover td{background:var(--surface2);}
 .sticky-col{position:sticky;right:0;background:var(--surface);box-shadow:-3px 0 8px rgba(0,0,0,.1);z-index:10;min-width:90px;width:90px;}
 thead .sticky-col{background:#1a1a1a;min-width:90px;width:90px;}
@@ -451,10 +451,10 @@ tr:hover .sticky-col{background:var(--surface2);}
       <!-- Filter pills -->
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
         <button onclick="setInboxFilter('all',this)" class="inbox-pill active" style="padding:5px 14px;border-radius:20px;border:1px solid #1a1a1a;background:#1a1a1a;color:white;font-size:.82rem;font-weight:600;cursor:pointer">All</button>
-        <button onclick="setInboxFilter('intake',this)" class="inbox-pill" style="padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:#555;font-size:.82rem;font-weight:600;cursor:pointer">📋 Intakes</button>
-        <button onclick="setInboxFilter('flight',this)" class="inbox-pill" style="padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:#555;font-size:.82rem;font-weight:600;cursor:pointer">✈ Flights</button>
-        <button onclick="setInboxFilter('lead',this)" class="inbox-pill" style="padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:#555;font-size:.82rem;font-weight:600;cursor:pointer">⭐ Leads</button>
-        <button onclick="setInboxFilter('email',this)" class="inbox-pill" style="padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:#555;font-size:.82rem;font-weight:600;cursor:pointer">📨 Emails</button>
+        <button onclick="setInboxFilter('intake',this)" class="inbox-pill" style="padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--muted);font-size:.82rem;font-weight:600;cursor:pointer">📋 Intakes</button>
+        <button onclick="setInboxFilter('flight',this)" class="inbox-pill" style="padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--muted);font-size:.82rem;font-weight:600;cursor:pointer">✈ Flights</button>
+        <button onclick="setInboxFilter('lead',this)" class="inbox-pill" style="padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--muted);font-size:.82rem;font-weight:600;cursor:pointer">⭐ Leads</button>
+        <button onclick="setInboxFilter('email',this)" class="inbox-pill" style="padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--muted);font-size:.82rem;font-weight:600;cursor:pointer">📨 Emails</button>
       </div>
 
       <div id="inboxList" style="display:flex;flex-direction:column;gap:10px">
@@ -479,7 +479,7 @@ tr:hover .sticky-col{background:var(--surface2);}
         <!-- LEFT PANEL: FORM -->
         <div>
           <!-- Resort -->
-          <div style="background:var(--surface);border:1px solid #e0e0e0;border-radius:12px;padding:18px;margin-bottom:14px">
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:14px">
             <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #c9a96e">Resort</div>
             <div style="margin-bottom:10px">
               <label class="form-label">Destination</label>
@@ -501,7 +501,7 @@ tr:hover .sticky-col{background:var(--surface2);}
           </div>
 
           <!-- Guest -->
-          <div style="background:var(--surface);border:1px solid #e0e0e0;border-radius:12px;padding:18px;margin-bottom:14px">
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:14px">
             <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #c9a96e">Guest</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
               <div style="grid-column:1/-1"><label class="form-label">Guest Name(s) *</label><input id="qb-name" class="form-input" placeholder="e.g. Tia Hatcher & Brenesha"></div>
@@ -525,7 +525,7 @@ tr:hover .sticky-col{background:var(--surface2);}
           </div>
 
           <!-- Trip -->
-          <div style="background:var(--surface);border:1px solid #e0e0e0;border-radius:12px;padding:18px;margin-bottom:14px">
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:14px">
             <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #c9a96e">Trip Details</div>
             <div style="display:grid;grid-template-columns:1fr 1fr 70px;gap:10px;margin-bottom:10px">
               <div><label class="form-label">Check-In</label><input type="date" id="qb-checkin" class="form-input" onchange="qbCalcCheckout()"></div>
@@ -538,7 +538,7 @@ tr:hover .sticky-col{background:var(--surface2);}
           <div id="qb-rooms-container"></div>
 
           <!-- Payment -->
-          <div style="background:var(--surface);border:1px solid #e0e0e0;border-radius:12px;padding:18px;margin-bottom:14px">
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:14px">
             <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #c9a96e">Payment Details</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
               <div><label class="form-label">Deposit</label><input id="qb-deposit" class="form-input" value="$50/person ($100 total for 2 guests)"></div>
@@ -556,7 +556,7 @@ tr:hover .sticky-col{background:var(--surface2);}
 
         <!-- RIGHT PANEL: PREVIEW -->
         <div id="qb-preview-panel" style="position:sticky;top:80px">
-          <div style="background:#f5f5f7;border:1px solid #e0e0e0;border-radius:12px;padding:20px;text-align:center;min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center" id="qb-empty-state">
+          <div style="background:#f5f5f7;border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center" id="qb-empty-state">
             <div style="font-size:3rem;margin-bottom:12px">📄</div>
             <div style="font-weight:700;color:var(--text);margin-bottom:6px">Your quote preview will appear here</div>
             <div style="font-size:.85rem;color:#888">Fill in the form and click Generate Quote</div>
@@ -567,7 +567,7 @@ tr:hover .sticky-col{background:var(--surface2);}
               <button onclick="qbCopyHTML()" style="padding:8px 16px;background:#c9a96e;color:var(--text);border:none;border-radius:8px;font-size:.85rem;font-weight:700;cursor:pointer">📋 Copy HTML</button>
             </div>
             <div id="qb-copy-msg" style="display:none;background:#eaf3de;color:#3b6d11;padding:8px 14px;border-radius:8px;font-size:.82rem;margin-bottom:10px"></div>
-            <iframe id="qb-iframe" style="width:100%;height:700px;border:1px solid #e0e0e0;border-radius:12px"></iframe>
+            <iframe id="qb-iframe" style="width:100%;height:700px;border:1px solid var(--border);border-radius:12px"></iframe>
           </div>
         </div>
       </div>
@@ -1089,7 +1089,7 @@ tr:hover .sticky-col{background:var(--surface2);}
       </div>
       <div class="form-group"><label>Deposit — $ per person</label><input type="number" id="w-depositPP" value="50"></div>
       <div class="form-group"><label>Min Deposit per Room ($)</label><input type="number" id="w-depositMin" value="100"></div>
-      <div class="form-group"><label>Gross Sales Override ($) <span style="font-size:.8rem;color:#aaa;font-weight:400">— enter total if guests not imported</span></label><input type="number" id="w-grossSalesOverride" placeholder="0.00" step="0.01"></div>
+      <div class="form-group"><label>Gross Sales Override ($) <span style="font-size:.8rem;color:var(--muted);font-weight:400">— enter total if guests not imported</span></label><input type="number" id="w-grossSalesOverride" placeholder="0.00" step="0.01"></div>
       <div class="form-group"><label>Commission ($)</label><input type="number" id="w-commission" placeholder="0.00" step="0.01"></div>
       <div class="form-group"><label style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="w-commissionReceived" style="width:18px;height:18px;cursor:pointer"> Commission Received</label></div>
     </div>
@@ -1469,27 +1469,27 @@ function renderWeddingGrid(){
       : `<span style="background:#1a1a1a;color:#c9a96e;font-size:.7rem;font-weight:700;padding:2px 7px;border-radius:10px;margin-left:6px">DWT</span>`;
     card.style.borderTop = `3px solid ${opBorder}`;
     card.innerHTML=`
-      <div style="font-size:.82rem;color:#999;margin-bottom:4px;display:flex;align-items:center;justify-content:space-between">${fmtDate(w.weddingDate)}${opBadge}</div>
-      ${w.resort?`<div style="font-size:.82rem;color:#888;margin-bottom:8px">${esc(w.resort)}</div>`:'<div style="margin-bottom:8px"></div>'}
-      <div style="font-size:1.25rem;font-weight:700;color:#1B2B4B;margin-bottom:4px;line-height:1.3">${esc(w.names)}</div>
-      ${w.destination?`<div style="font-size:.82rem;color:#aaa;margin-bottom:6px">${esc(w.destination)}</div>`:'<div style="margin-bottom:6px"></div>'}
+      <div style="font-size:.82rem;color:var(--muted);margin-bottom:4px;display:flex;align-items:center;justify-content:space-between">${fmtDate(w.weddingDate)}${opBadge}</div>
+      ${w.resort?`<div style="font-size:.82rem;color:var(--muted);margin-bottom:8px">${esc(w.resort)}</div>`:'<div style="margin-bottom:8px"></div>'}
+      <div style="font-size:1.25rem;font-weight:700;color:var(--text);margin-bottom:4px;line-height:1.3">${esc(w.names)}</div>
+      ${w.destination?`<div style="font-size:.82rem;color:var(--muted);margin-bottom:6px">${esc(w.destination)}</div>`:'<div style="margin-bottom:6px"></div>'}
       <div style="margin-bottom:8px;min-height:18px">${w.portalProvided?'<span style="background:#f0f8f2;border:1px solid #a8cca8;color:#1a5c2a;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:10px">&#10003; Portal Sent</span>':''}</div>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:14px;border-top:1px solid #eee;padding-top:12px">
         <div style="text-align:center">
           <div style="font-size:1.3rem;font-weight:700;color:#1a1a1a">${rooms}</div>
-          <div style="font-size:.72rem;color:#888;text-transform:uppercase;margin-top:2px">Rooms</div>
+          <div style="font-size:.72rem;color:var(--muted);text-transform:uppercase;margin-top:2px">Rooms</div>
         </div>
         <div style="text-align:center">
           <div style="font-size:1.3rem;font-weight:700;color:#1a1a1a">${guestCount}</div>
-          <div style="font-size:.72rem;color:#888;text-transform:uppercase;margin-top:2px">Guests</div>
+          <div style="font-size:.72rem;color:var(--muted);text-transform:uppercase;margin-top:2px">Guests</div>
         </div>
         <div style="text-align:center">
           <div style="font-size:1.1rem;font-weight:700;color:#2a7a4a">$${fmt(paid)}</div>
-          <div style="font-size:.72rem;color:#888;text-transform:uppercase;margin-top:2px">Paid</div>
+          <div style="font-size:.72rem;color:var(--muted);text-transform:uppercase;margin-top:2px">Paid</div>
         </div>
         <div style="text-align:center">
           <div style="font-size:1.1rem;font-weight:700;color:${outstanding>0?'#8a1a1a':'#2a7a4a'}">$${fmt(outstanding)}</div>
-          <div style="font-size:.72rem;color:#888;text-transform:uppercase;margin-top:2px">Owed</div>
+          <div style="font-size:.72rem;color:var(--muted);text-transform:uppercase;margin-top:2px">Owed</div>
         </div>
       </div>
       <div style="display:flex;gap:6px;justify-content:center" onclick="event.stopPropagation()">
@@ -2189,8 +2189,8 @@ function renderFlights(){
       <td style="color:var(--muted);font-size:.92rem">${esc(f.notes)}</td>
       <td class="sticky-col" style="text-align:center;padding:6px">
         <div style="display:flex;flex-direction:column;gap:4px;align-items:center">
-          ${g.email?`<button onclick="event.stopPropagation();sendGuestFlightEmail('${g.id}')" style="background:#1a3a1a;border:1px solid #2a6a2a;color:#6fcf6f;font-size:.8rem;font-weight:700;padding:4px 8px;border-radius:5px;cursor:pointer;white-space:nowrap">📧 Send</button>`:`<span style="color:#aaa;font-size:.75rem">No email</span>`}
-          <button onclick="openFlightModal('${g.id}')" style="background:var(--surface2);border:1px solid #999;color:#1B2B4B;font-size:.8rem;font-weight:700;padding:4px 8px;border-radius:5px;cursor:pointer">✏️ Edit</button>
+          ${g.email?`<button onclick="event.stopPropagation();sendGuestFlightEmail('${g.id}')" style="background:#1a3a1a;border:1px solid #2a6a2a;color:#6fcf6f;font-size:.8rem;font-weight:700;padding:4px 8px;border-radius:5px;cursor:pointer;white-space:nowrap">📧 Send</button>`:`<span style="color:var(--muted);font-size:.75rem">No email</span>`}
+          <button onclick="openFlightModal('${g.id}')" style="background:var(--surface2);border:1px solid #999;color:var(--text);font-size:.8rem;font-weight:700;padding:4px 8px;border-radius:5px;cursor:pointer">✏️ Edit</button>
         </div>
       </td>
     </tr>`;
@@ -2402,8 +2402,8 @@ function renderReports(){
       <div style="display:flex;gap:6px">${toggleBtns}</div>
     </div>
 
-    <div style="background:var(--surface);border:1px solid #e0e0e0;border-radius:14px;padding:32px 36px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.06)">
-      <div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:#888;margin-bottom:6px">${selYr}</div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px 36px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.06)">
+      <div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:6px">${selYr}</div>
       <div style="display:flex;gap:8px;align-items:center;margin-bottom:28px">
         <div style="font-size:.85rem;color:#888">${d.groups} events</div>
         <div style="color:#ccc">&middot;</div>
@@ -2411,11 +2411,11 @@ function renderReports(){
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
         <div>
-          <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:#aaa;margin-bottom:8px">${grossLabel}</div>
+          <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px">${grossLabel}</div>
           <div style="font-size:2.6rem;font-weight:800;color:var(--text);line-height:1">$${fmt(gross)}</div>
         </div>
         <div>
-          <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:#aaa;margin-bottom:8px">${commLabel}</div>
+          <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px">${commLabel}</div>
           <div style="font-size:2.6rem;font-weight:800;color:#1a5c2a;line-height:1">$${fmt(comm)}</div>
         </div>
       </div>
@@ -2428,10 +2428,10 @@ function renderReports(){
     <div style="background:#1a1a1a;border-radius:12px;padding:20px 28px;color:white">
       <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:#c9a96e;margin-bottom:14px">All Years</div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
-        <div><div style="font-size:.7rem;color:#aaa;margin-bottom:4px">Events</div><div style="font-size:1.6rem;font-weight:800">${totGroups}</div></div>
-        <div><div style="font-size:.7rem;color:#aaa;margin-bottom:4px">Passengers</div><div style="font-size:1.6rem;font-weight:800">${totPass}</div></div>
-        <div><div style="font-size:.7rem;color:#aaa;margin-bottom:4px">${isProjected?'Proj. Gross':'Collected'}</div><div style="font-size:1.6rem;font-weight:800;color:#c9a96e">$${fmt(totGross)}</div></div>
-        <div><div style="font-size:.7rem;color:#aaa;margin-bottom:4px">${isProjected?'Proj. Comm.':'Comm. Rcvd'}</div><div style="font-size:1.6rem;font-weight:800;color:#4caf88">$${fmt(totComm)}</div></div>
+        <div><div style="font-size:.7rem;color:var(--muted);margin-bottom:4px">Events</div><div style="font-size:1.6rem;font-weight:800">${totGroups}</div></div>
+        <div><div style="font-size:.7rem;color:var(--muted);margin-bottom:4px">Passengers</div><div style="font-size:1.6rem;font-weight:800">${totPass}</div></div>
+        <div><div style="font-size:.7rem;color:var(--muted);margin-bottom:4px">${isProjected?'Proj. Gross':'Collected'}</div><div style="font-size:1.6rem;font-weight:800;color:#c9a96e">$${fmt(totGross)}</div></div>
+        <div><div style="font-size:.7rem;color:var(--muted);margin-bottom:4px">${isProjected?'Proj. Comm.':'Comm. Rcvd'}</div><div style="font-size:1.6rem;font-weight:800;color:#4caf88">$${fmt(totComm)}</div></div>
       </div>
     </div>`;
 }
@@ -2455,12 +2455,12 @@ function openGroupReportModal() {
   overlay.innerHTML = `<div style="background:var(--surface);border-radius:14px;padding:28px;width:380px;box-shadow:0 8px 40px rgba(0,0,0,.3);">
     <h3 style="margin-bottom:18px;font-size:1.1rem;">📄 Group Report Options</h3>
     <div style="margin-bottom:14px;">
-      <div style="font-size:.8rem;font-weight:700;color:#888;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">Report Type</div>
+      <div style="font-size:.8rem;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">Report Type</div>
       <label style="display:flex;align-items:center;gap:10px;margin-bottom:8px;cursor:pointer;"><input type="radio" name="reportType" value="group" checked> Full Group Report</label>
       <label style="display:flex;align-items:center;gap:10px;cursor:pointer;"><input type="radio" name="reportType" value="roomlisting"> Room Listing Only</label>
     </div>
     <div style="margin-bottom:20px;">
-      <div style="font-size:.8rem;font-weight:700;color:#888;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">Include</div>
+      <div style="font-size:.8rem;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">Include</div>
       <label style="display:flex;align-items:center;gap:10px;margin-bottom:8px;cursor:pointer;"><input type="radio" name="reportFilter" value="all" checked> All Guests</label>
       <label style="display:flex;align-items:center;gap:10px;cursor:pointer;"><input type="radio" name="reportFilter" value="active"> Active Only (exclude cancelled)</label>
     </div>
@@ -2507,7 +2507,7 @@ function generateGroupReport(filter) {
       <td style="padding:9px 8px;border-bottom:1px solid var(--border);font-size:.82rem;text-align:right;color:#2a7a2a;">${fmt(paid)}</td>
       <td style="padding:9px 8px;border-bottom:1px solid var(--border);font-size:.82rem;text-align:right;color:${bal > 0 ? '#c0392b' : '#2a7a2a'};">${fmt(bal)}</td>
       <td style="padding:9px 8px;border-bottom:1px solid var(--border);font-size:.82rem;text-align:right;color:#b8973a;">${comm ? fmt(comm) : '—'}</td>
-      <td style="padding:9px 8px;border-bottom:1px solid var(--border);font-size:.82rem;color:#888;">${g.status || '—'}</td>
+      <td style="padding:9px 8px;border-bottom:1px solid var(--border);font-size:.82rem;color:var(--muted);">${g.status || '—'}</td>
     </tr>`;
   });
 
@@ -2519,14 +2519,14 @@ function generateGroupReport(filter) {
     .meta span{font-size:.82rem;color:#ddd;}
     .summary{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:18px;}
     .stat{background:var(--surface2);border-radius:8px;padding:12px;text-align:center;}
-    .stat .label{font-size:.72rem;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
+    .stat .label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
     .stat .val{font-size:1rem;font-weight:700;color:var(--text);}
     .stat .val.green{color:#2a7a2a;} .stat .val.red{color:#c0392b;} .stat .val.gold{color:#b8973a;}
     table{width:100%;border-collapse:collapse;}
     thead tr{background:#1B2B4B;}
     thead th{padding:10px 8px;text-align:left;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:#c9a96e;}
     thead th:nth-child(n+6){text-align:right;}
-    .footer{margin-top:20px;font-size:.75rem;color:#aaa;text-align:center;border-top:1px solid #eee;padding-top:10px;}
+    .footer{margin-top:20px;font-size:.75rem;color:var(--muted);text-align:center;border-top:1px solid #eee;padding-top:10px;}
     @media print{body{padding:12px;}}</style></head><body>
     <div class="header"><h1>✦ ${w.names} — Group Report</h1>
     <div class="meta">
@@ -2609,7 +2609,7 @@ function generateRoomListingReport(filter){
     + 'table{width:100%;border-collapse:collapse;font-size:.82rem;}'
     + 'thead tr{background:#1B2B4B;}'
     + 'thead th{padding:10px 8px;text-align:left;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:#c9a96e;}'
-    + '.footer{margin-top:20px;font-size:.75rem;color:#aaa;text-align:center;border-top:1px solid #eee;padding-top:10px;}'
+    + '.footer{margin-top:20px;font-size:.75rem;color:var(--muted);text-align:center;border-top:1px solid #eee;padding-top:10px;}'
     + '@media print{body{padding:12px;}}</style></head><body>'
     + '<div class="header"><h1> '+w.names+' — Resort Room Listing</h1>'
     + '<div class="meta"><span> '+(w.resort||'—')+'</span>'
@@ -2671,11 +2671,11 @@ function renderTimelineQuarter(cont, weddings, guests){
         <div style="font-size:.82rem;font-weight:700;color:#1a1a1a">${fmtDate(w.weddingDate)} <span style="color:${color};font-size:.72rem">${daysOut}d</span></div>
         <div style="font-size:.88rem;font-weight:700;color:var(--text);margin-top:1px">${esc(w.names)}</div>
         ${w.resort?`<div style="font-size:.75rem;color:#888">${esc(w.resort)}</div>`:''}
-        <div style="font-size:.72rem;color:#aaa;margin-top:2px">${guestCount} guests &middot; ${wGuests.length} rooms</div>
+        <div style="font-size:.72rem;color:var(--muted);margin-top:2px">${guestCount} guests &middot; ${wGuests.length} rooms</div>
       </div>`;
     }).join('');
 
-    return `<div style="flex:1;min-width:0;background:var(--surface);border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.06)">
+    return `<div style="flex:1;min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.06)">
       <div style="background:#1a1a1a;padding:10px 12px">
         <div style="color:white;font-weight:700;font-size:.88rem">${q.label}</div>
         <div style="color:#c9a96e;font-size:.75rem;margin-top:2px">${q.events.length} event${q.events.length!==1?'s':''}</div>
@@ -2721,11 +2721,11 @@ function renderTimeline(){
         <div style="width:14px;height:14px;border-radius:50%;background:${dotColor};border:2px solid white;box-shadow:0 0 0 2px ${dotColor};margin-top:18px;flex-shrink:0"></div>
         <div style="flex:1;width:2px;background:#e0e0e0;margin:4px 0"></div>
       </div>
-      <div style="flex:1;background:var(--surface);border:1px solid #e0e0e0;border-radius:10px;padding:14px 16px;margin-bottom:12px;transition:box-shadow .15s" onmouseover="this.style.boxShadow='0 2px 12px rgba(0,0,0,.1)'" onmouseout="this.style.boxShadow='none'">
+      <div style="flex:1;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:12px;transition:box-shadow .15s" onmouseover="this.style.boxShadow='0 2px 12px rgba(0,0,0,.1)'" onmouseout="this.style.boxShadow='none'">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
           <div>
             <div style="font-size:1.05rem;font-weight:700;color:#1a1a1a">${esc(w.names)}</div>
-            ${w.resort?`<div style="font-size:.82rem;color:#888;margin-top:2px">${esc(w.resort)}</div>`:''}
+            ${w.resort?`<div style="font-size:.82rem;color:var(--muted);margin-top:2px">${esc(w.resort)}</div>`:''}
             ${w.destination?`<div style="font-size:.78rem;color:#aaa">${esc(w.destination)}</div>`:''}
           </div>
           <div style="text-align:right;flex-shrink:0;margin-left:12px">
@@ -2781,7 +2781,7 @@ function renderLeads(){
       <td class="sticky-col">
         <button onclick="event.stopPropagation();toggleLeadMenu('${l.id}',this)" style="background:#1a1a1a;border:1px solid #444;color:white;font-size:.85rem;font-weight:700;padding:5px 12px;border-radius:6px;cursor:pointer">⋯</button>
         <div id="leadMenu_${l.id}" style="display:none;position:fixed;background:var(--surface);border:1px solid var(--border);border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.2);z-index:9999;min-width:150px;padding:4px 0">
-          <div onclick="editLead('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:#1B2B4B;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">✏️ Edit</div>
+          <div onclick="editLead('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:var(--text);font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">✏️ Edit</div>
           <div onclick="openIntakeModal('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:#2a5a8a;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">📋 Send Intake</div>
           <div onclick="viewResponses('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:#7a3a8a;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">👁 View Responses</div>
           <div onclick="moveLeadToActive('${l.id}');closeAllLeadMenus()" style="padding:9px 16px;cursor:pointer;color:#1a5a1a;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">🎉 Activate</div>
@@ -2920,10 +2920,10 @@ function renderDetailGuests(){
     <div style="position:relative;display:inline-block">
       <button onclick="toggleRowMenu('${g.id}', event)" style="background:#1a1a1a;border:none;color:white;font-size:1.2rem;width:32px;height:32px;border-radius:6px;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center">⋮</button>
       <div id="rowMenu_${g.id}" style="display:none;position:fixed;background:var(--surface);border:1px solid var(--border);border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.2);z-index:9999;min-width:130px;padding:4px 0">
-        <div onclick="editGuest('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:#1B2B4B;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">✏️ Edit</div>
-        <div onclick="openFlightModal('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:#1B2B4B;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">✈️ Flight</div>
+        <div onclick="editGuest('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:var(--text);font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">✏️ Edit</div>
+        <div onclick="openFlightModal('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:var(--text);font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">✈️ Flight</div>
         <div onclick="openGuestPayModal('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:#1a5a1a;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">💰 Pay</div>
-        ${g.email?`<div onclick="sendGuestFlightEmail('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:#1B2B4B;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">📧 Email</div>`:''}
+        ${g.email?`<div onclick="sendGuestFlightEmail('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:var(--text);font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='white'">📧 Email</div>`:''}
         <div style="border-top:1px solid #eee;margin:4px 0"></div>
         ${g.status!=='Cancelled'
           ?`<div onclick="cancelGuest('${g.id}');closeAllRowMenus()" style="padding:9px 16px;cursor:pointer;color:#8a1a1a;font-size:.92rem;font-weight:600;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='#fff0f0'" onmouseout="this.style.background='white'">🚫 Cancel</div>`
@@ -2946,7 +2946,7 @@ function renderDetailGuests(){
     const f=calcFinancials(g,w);
     if(guestView==='summary'){
       const cancelStyle = g.status==='Cancelled' ? 'opacity:0.45;text-decoration:line-through;background:var(--surface2);' : '';
-      const cancelLabel = g.status==='Cancelled' ? '<span style="font-size:.72rem;color:#aaa;font-weight:700;margin-left:6px">CANCELLED</span>' : '';
+      const cancelLabel = g.status==='Cancelled' ? '<span style="font-size:.72rem;color:var(--muted);font-weight:700;margin-left:6px">CANCELLED</span>' : '';
       return `<tr style="${cancelStyle}">
         <td style="color:var(--muted);text-align:center;font-size:.9rem">${rn}</td>
         <td style="font-size:.9rem;text-align:center">${esc(g.ti)||'—'}</td>
@@ -2961,7 +2961,7 @@ function renderDetailGuests(){
       </tr>`;
     } else {
       const cancelStyleF = g.status==='Cancelled' ? 'opacity:0.45;text-decoration:line-through;background:var(--surface2);' : '';
-      const cancelLabelF = g.status==='Cancelled' ? '<span style="font-size:.72rem;color:#aaa;font-weight:700;margin-left:6px">CANCELLED</span>' : '';
+      const cancelLabelF = g.status==='Cancelled' ? '<span style="font-size:.72rem;color:var(--muted);font-weight:700;margin-left:6px">CANCELLED</span>' : '';
       return `<tr style="${cancelStyleF}">
         <td style="color:var(--muted)">${rn}</td>
         <td style="font-size:.95rem">${esc(g.booking)}</td>
@@ -3010,8 +3010,8 @@ function renderDetailFlights(){
       <td style="color:var(--muted);font-size:.92rem">${esc(f.notes)}</td>
       <td class="sticky-col" style="text-align:center;padding:6px">
         <div style="display:flex;flex-direction:column;gap:4px;align-items:center">
-          ${g.email ? `<button onclick="event.stopPropagation();sendGuestFlightEmail('${g.id}')" style="background:#1a3a1a;border:1px solid #2a6a2a;color:#6fcf6f;font-size:.8rem;font-weight:700;padding:4px 8px;border-radius:5px;cursor:pointer;white-space:nowrap">📧 Send</button>` : `<span style="color:#aaa;font-size:.75rem">No email</span>`}
-          <button onclick="openFlightModal('${g.id}')" style="background:var(--surface2);border:1px solid #999;color:#1B2B4B;font-size:.8rem;font-weight:700;padding:4px 8px;border-radius:5px;cursor:pointer">✏️ Edit</button>
+          ${g.email ? `<button onclick="event.stopPropagation();sendGuestFlightEmail('${g.id}')" style="background:#1a3a1a;border:1px solid #2a6a2a;color:#6fcf6f;font-size:.8rem;font-weight:700;padding:4px 8px;border-radius:5px;cursor:pointer;white-space:nowrap">📧 Send</button>` : `<span style="color:var(--muted);font-size:.75rem">No email</span>`}
+          <button onclick="openFlightModal('${g.id}')" style="background:var(--surface2);border:1px solid #999;color:var(--text);font-size:.8rem;font-weight:700;padding:4px 8px;border-radius:5px;cursor:pointer">✏️ Edit</button>
         </div>
       </td>
     </tr>`;
@@ -3796,10 +3796,10 @@ function generateFlightReport(){
   body{font-family:'Segoe UI',sans-serif;margin:0;padding:24px;color:var(--text);font-size:14px;}
   .header{background:#1a1a1a;color:white;padding:20px 24px;border-radius:8px;margin-bottom:20px;}
   .header h1{font-size:1.4rem;margin:0 0 4px;}
-  .header p{color:#aaa;margin:0;font-size:.9rem;}
+  .header p{color:var(--muted);margin:0;font-size:.9rem;}
   .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;}
   .meta-card{background:#f4f4f4;border-radius:6px;padding:12px;border:1px solid var(--border);}
-  .meta-card .label{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#888;margin-bottom:3px;}
+  .meta-card .label{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:3px;}
   .meta-card .value{font-size:.95rem;font-weight:600;}
   table{width:100%;border-collapse:collapse;margin-bottom:20px;}
   thead{background:#1a1a1a;}
@@ -3807,11 +3807,11 @@ function generateFlightReport(){
   td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top;}
   tr:nth-child(even) td{background:var(--surface2);}
   .name{font-weight:700;}
-  .booking{color:#888;font-size:.85rem;}
+  .booking{color:var(--muted);font-size:.85rem;}
   .flight-num{font-weight:700;font-size:1rem;}
   .no-flight{color:#ccc;font-style:italic;}
   .section-title{background:var(--surface2);padding:8px 12px;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);border-left:3px solid #1a1a1a;}
-  .footer{margin-top:30px;padding-top:12px;border-top:1px solid #ddd;color:#888;font-size:.8rem;text-align:center;}
+  .footer{margin-top:30px;padding-top:12px;border-top:1px solid #ddd;color:var(--muted);font-size:.8rem;text-align:center;}
   @media print{body{padding:0;}}
 </style>
 </head>
@@ -3948,7 +3948,7 @@ ${AMY_SIGNATURE}`;
         <button id="flightEmailCancelBtn" style="padding:10px 20px;border:1px solid var(--border);background:var(--surface);border-radius:8px;font-size:.92rem;font-weight:600;cursor:pointer">Cancel</button>
         <button id="flightEmailSendBtn" style="padding:10px 22px;background:#1a1a1a;color:white;border:none;border-radius:8px;font-size:.92rem;font-weight:700;cursor:pointer">✉️ Send to ${wGuests.length} Guest${wGuests.length>1?'s':''}</button>
       </div>
-      <div id="flightEmailProgress" style="display:none;margin-top:14px;font-size:.88rem;color:#555;text-align:center"></div>
+      <div id="flightEmailProgress" style="display:none;margin-top:14px;font-size:.88rem;color:var(--muted);text-align:center"></div>
     </div>`;
 
   document.body.appendChild(overlay);
@@ -4121,11 +4121,11 @@ async function viewResponsesByWedding(weddingId) {
   panel.style.cssText = 'position:fixed;top:80px;right:24px;width:520px;max-height:70vh;overflow-y:auto;background:var(--surface);border-radius:14px;box-shadow:0 8px 40px rgba(0,0,0,.22);z-index:9999;';
   const dragHandle = document.createElement('div');
   dragHandle.style.cssText = 'background:#1a1a2e;padding:14px 18px;border-radius:14px 14px 0 0;display:flex;justify-content:space-between;align-items:center;';
-  dragHandle.innerHTML = '<div style="color:white;font-weight:700;font-size:.95rem">📋 Intake Responses — ' + esc(eventName) + '</div><button onclick="document.getElementById(\'responses-panel\').remove()" style="background:none;border:none;color:#aaa;font-size:1.2rem;cursor:pointer">&times;</button>';
+  dragHandle.innerHTML = '<div style="color:white;font-weight:700;font-size:.95rem">📋 Intake Responses — ' + esc(eventName) + '</div><button onclick="document.getElementById(\'responses-panel\').remove()" style="background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer">&times;</button>';
   const body = document.createElement('div');
   body.id = 'responses-list';
   body.style.cssText = 'padding:16px;';
-  body.innerHTML = '<p style="color:#888;text-align:center;padding:24px">Loading...</p>';
+  body.innerHTML = '<p style="color:var(--muted);text-align:center;padding:24px">Loading...</p>';
   panel.appendChild(dragHandle);
   panel.appendChild(body);
   document.body.appendChild(panel);
@@ -4146,17 +4146,17 @@ async function viewResponsesByWedding(weddingId) {
       });
     }
     if (docs.length === 0) {
-      body.innerHTML = '<p style="color:#888;text-align:center;padding:24px">No intake responses yet.</p>';
+      body.innerHTML = '<p style="color:var(--muted);text-align:center;padding:24px">No intake responses yet.</p>';
       return;
     }
     body.innerHTML = docs.map(doc => {
       const d = doc.data();
       const date = d.submittedAt ? new Date(d.submittedAt).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'}) : '—';
-      return '<div style="border:1px solid #e0e0e0;border-radius:10px;padding:16px;margin-bottom:14px">'
+      return '<div style="border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:14px">'
         + '<div style="display:flex;justify-content:space-between;margin-bottom:8px">'
         + '<strong>' + esc(d.firstName||'') + ' ' + esc(d.lastName||'') + '</strong>'
         + '<span style="font-size:.8rem;color:#888">' + date + '</span></div>'
-        + '<div style="font-size:.85rem;color:#555;line-height:1.7">'
+        + '<div style="font-size:.85rem;color:var(--muted);line-height:1.7">'
         + (d.email ? '✉️ ' + esc(d.email) + '<br>' : '')
         + (d.phone ? '📞 ' + esc(d.phone) + '<br>' : '')
         + (d.roomPreference ? '🛏 ' + esc(d.roomPreference) + '<br>' : '')
@@ -4207,10 +4207,10 @@ async function viewResponses(leadId) {
   if(existing) existing.remove();
   const panel = document.createElement('div');
   panel.id = 'responses-panel';
-  panel.style.cssText = 'position:fixed;top:80px;left:24px;width:460px;background:var(--surface);border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,.25);z-index:99999;border:1px solid #e0e0e0;overflow:hidden';
+  panel.style.cssText = 'position:fixed;top:80px;left:24px;width:460px;background:var(--surface);border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,.25);z-index:99999;border:1px solid var(--border);overflow:hidden';
   const dragHandle = document.createElement('div');
   dragHandle.style.cssText = 'background:#1a1a1a;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;cursor:grab;user-select:none';
-  dragHandle.innerHTML = '<div style="color:white;font-weight:700;font-size:.95rem">&#x1F4CB; Intake Responses &mdash; ' + esc(leadName) + '</div><button onclick="document.getElementById(&quot;responses-panel&quot;).remove()" style="background:none;border:none;color:#aaa;font-size:1.2rem;cursor:pointer;line-height:1;padding:0 4px">&times;</button>';
+  dragHandle.innerHTML = '<div style="color:white;font-weight:700;font-size:.95rem">&#x1F4CB; Intake Responses &mdash; ' + esc(leadName) + '</div><button onclick="document.getElementById(&quot;responses-panel&quot;).remove()" style="background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer;line-height:1;padding:0 4px">&times;</button>';
   const inner = document.createElement('div');
   inner.style.cssText = 'padding:18px;max-height:75vh;overflow-y:auto';
   const listEl = document.createElement('div');
@@ -4238,14 +4238,14 @@ async function viewResponses(leadId) {
     }
     const list = document.getElementById('responses-list');
     if (snap.empty) {
-      list.innerHTML = '<p style="color:#888;text-align:center;padding:24px">No responses yet.</p>';
+      list.innerHTML = '<p style="color:var(--muted);text-align:center;padding:24px">No responses yet.</p>';
       return;
     }
     list.innerHTML = snap.docs.map(doc => {
       const d = doc.data();
       const date = d.submittedAt ? new Date(d.submittedAt).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'}) : '&mdash;';
       const notesHtml = d.notes ? '<div style="margin-top:10px;padding:10px;background:var(--surface2);border-radius:6px;font-size:.86rem;color:#555"><span style="color:#888">Notes:</span> ' + esc(d.notes) + '</div>' : '';
-      return '<div style="border:1px solid #e0e0e0;border-radius:10px;padding:16px;margin-bottom:14px">'
+      return '<div style="border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:14px">'
         + '<div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:10px">'
         + '<strong style="font-size:1rem">' + esc(d.firstName||'') + ' ' + esc(d.lastName||'') + '</strong>'
         + '<span style="font-size:.78rem;color:#888">' + date + '</span>'
@@ -4282,11 +4282,11 @@ function copyIntakeLink() {
 </script>
 
 <!-- Intake Modal — Draggable Floating Popup -->
-<div id="intakeModal" style="display:none;position:fixed;top:80px;right:24px;width:420px;background:var(--surface);border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,.22);z-index:99999;border:1px solid #e0e0e0;overflow:hidden">
+<div id="intakeModal" style="display:none;position:fixed;top:80px;right:24px;width:420px;background:var(--surface);border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,.22);z-index:99999;border:1px solid var(--border);overflow:hidden">
   <!-- Drag handle / header -->
   <div id="intakeModalHeader" style="background:#1a1a1a;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;cursor:grab;user-select:none">
     <div style="color:white;font-weight:700;font-size:.95rem">📋 Send Intake Form</div>
-    <button onclick="closeIntakePopup()" style="background:none;border:none;color:#aaa;font-size:1.2rem;cursor:pointer;line-height:1;padding:0 4px">&times;</button>
+    <button onclick="closeIntakePopup()" style="background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer;line-height:1;padding:0 4px">&times;</button>
   </div>
   <div style="padding:18px;max-height:75vh;overflow-y:auto">
     <p style="font-size:.82rem;color:var(--muted);margin-bottom:14px">Fill in what you know — the client fills out the rest.</p>
@@ -4463,7 +4463,7 @@ function renderInbox(){
       <div onclick="handleInboxClick('${item.id}')" style="flex:1;min-width:0;cursor:pointer">
         <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:4px">
           <div style="font-weight:${isRead?'600':'700'};color:var(--text);font-size:.92rem">${item.title}${!isRead?'<span style="display:inline-block;width:8px;height:8px;background:#e05555;border-radius:50%;margin-left:8px;vertical-align:middle"></span>':''}</div>
-          <div style="font-size:.78rem;color:#aaa;white-space:nowrap;flex-shrink:0">${timeStr}</div>
+          <div style="font-size:.78rem;color:var(--muted);white-space:nowrap;flex-shrink:0">${timeStr}</div>
         </div>
         <div style="font-size:.83rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${item.subtitle}</div>
       </div>
@@ -4564,7 +4564,7 @@ function showInboxIntakeDetail(id, data){
 
   const rows = fields.map(([label, value]) => `
     <div style="display:flex;gap:12px;padding:8px 0;border-bottom:1px solid #f0f0f0">
-      <div style="font-size:.82rem;font-weight:700;color:#888;min-width:140px;flex-shrink:0">${label}</div>
+      <div style="font-size:.82rem;font-weight:700;color:var(--muted);min-width:140px;flex-shrink:0">${label}</div>
       <div style="font-size:.88rem;color:#1a1a1a">${esc(String(value))}</div>
     </div>`).join('');
 
@@ -4573,17 +4573,17 @@ function showInboxIntakeDetail(id, data){
   if(existingIntake) existingIntake.remove();
   const panel = document.createElement('div');
   panel.id = 'inbox-intake-panel';
-  panel.style.cssText = 'position:fixed;top:80px;left:24px;width:460px;background:var(--surface);border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,.25);z-index:99999;border:1px solid #e0e0e0;overflow:hidden';
+  panel.style.cssText = 'position:fixed;top:80px;left:24px;width:460px;background:var(--surface);border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,.25);z-index:99999;border:1px solid var(--border);overflow:hidden';
   const guestName = esc((data.firstName||'')+' '+(data.lastName||'')).trim();
   const groupLabel = esc(data.groupName||data.eventName||'');
   const replySubject = encodeURIComponent('Re: '+(data.groupName||data.eventName||'Your Inquiry'));
   const replyEmail = data.email||'';
   panel.innerHTML = '<div id="inbox-intake-handle" style="background:#1a1a1a;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;cursor:grab;user-select:none">'
     + '<div style="color:white;font-weight:700;font-size:.95rem">&#x1F4CB; Intake &#x2014; '+guestName+'</div>'
-    + '<button onclick="document.getElementById(&quot;inbox-intake-panel&quot;).remove()" style="background:none;border:none;color:#aaa;font-size:1.2rem;cursor:pointer;line-height:1;padding:0 4px">&times;</button>'
+    + '<button onclick="document.getElementById(&quot;inbox-intake-panel&quot;).remove()" style="background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer;line-height:1;padding:0 4px">&times;</button>'
     + '</div>'
     + '<div style="padding:18px;max-height:75vh;overflow-y:auto">'
-    + '<div style="font-size:.82rem;color:#888;margin-bottom:12px">'+groupLabel+'</div>'
+    + '<div style="font-size:.82rem;color:var(--muted);margin-bottom:12px">'+groupLabel+'</div>'
     + '<div style="margin-bottom:16px">'+rows+'</div>'
     + '<div style="display:flex;justify-content:flex-end;gap:10px">'
     + '<button onclick="safeMailto(\'mailto:'+replyEmail+'?subject='+replySubject+'\')" style="padding:8px 16px;background:#c9a96e;color:var(--text);border:none;border-radius:8px;font-size:.85rem;font-weight:700;cursor:pointer">&#x1F4E7; Reply</button>'
@@ -4604,7 +4604,7 @@ function showInboxEmailDetail(id, data){
           <h3 style="font-size:1rem;font-weight:700;color:var(--text);margin-bottom:4px">${esc(data.subject||'(no subject)')}</h3>
           <div style="font-size:.83rem;color:#888">From: ${esc(data.from||'')} · ${data.receivedAt?fmtTimeAgo(data.receivedAt):''}</div>
         </div>
-        <button onclick="this.closest('div[style*=fixed]').remove()" style="background:none;border:none;font-size:1.4rem;cursor:pointer;color:#888;padding:0 0 0 16px">✕</button>
+        <button onclick="this.closest('div[style*=fixed]').remove()" style="background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--muted);padding:0 0 0 16px">✕</button>
       </div>
       <div style="background:var(--surface2);border-radius:8px;padding:16px;font-size:.88rem;line-height:1.6;color:var(--text);white-space:pre-wrap;font-family:inherit">${esc(data.body||data.snippet||'')}</div>
       <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:16px">
@@ -4661,7 +4661,7 @@ function showLockScreen() {
     lock.innerHTML = `<div style="text-align:center;color:white;">
       <div style="font-size:2rem;margin-bottom:8px">🔐</div>
       <div style="font-family:serif;font-size:1.3rem;color:#c9a96e;margin-bottom:4px">✦ Christopher CRM</div>
-      <div style="font-size:.85rem;color:#888;margin-bottom:24px">Christopher CRM</div>
+      <div style="font-size:.85rem;color:var(--muted);margin-bottom:24px">Christopher CRM</div>
       <input id="crm-pw-input" type="password" placeholder="Enter password" autofocus
         style="width:260px;padding:12px 16px;border-radius:8px;border:1px solid #444;background:#111;color:white;font-size:1rem;text-align:center;outline:none;display:block;margin:0 auto 12px;">
       <button onclick="submitLock()"
