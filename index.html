@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Amy Cate CRM</title>
+<title> Christopher CRM</title>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
@@ -225,7 +225,7 @@ tr:hover .sticky-col{background:var(--surface2);}
 <!-- LOCK SCREEN -->
 <div id="app">
   <header autocomplete="off">
-    <div class="logo"> Amy Cate CRM <span id="weddingLabel" style="display:none;font-size:.82rem;font-weight:400;color:#aaa"></span></div>
+    <div class="logo"> Christopher CRM <span id="weddingLabel" style="display:none;font-size:.82rem;font-weight:400;color:#aaa"></span></div>
     <nav style="display:flex;flex-direction:column;align-items:center;gap:2px">
       <div style="display:flex;align-items:center;gap:4px">
         <button type="button" autocomplete="off" name="nav_weddings" class="nav-btn active" onclick="showTab('setup')" style="" data-noautofill="1">Active Events</button>
@@ -1169,12 +1169,12 @@ tr:hover .sticky-col{background:var(--surface2);}
 <script>
 // ── FIREBASE ──
 const firebaseConfig = {
-  apiKey: "AIzaSyAlYgdkcl7ZuRL2pXJ7BObGuQyxMdVH4Js",
-  authDomain: "wedding-crm-e5d12.firebaseapp.com",
-  projectId: "wedding-crm-e5d12",
-  storageBucket: "wedding-crm-e5d12.firebasestorage.app",
-  messagingSenderId: "246819649586",
-  appId: "1:246819649586:web:a74debd217ce048d26242b"
+  apiKey: "AIzaSyA5D1Qmh7nCP54o8Yf28ZUGVDgL9v_4GVM",
+  authDomain: "christopher-crm.firebaseapp.com",
+  projectId: "christopher-crm",
+  storageBucket: "christopher-crm.firebasestorage.app",
+  messagingSenderId: "459299414403",
+  appId: "1:459299414403:web:6f00dbcd2ee9a40b0b96b6"
 };
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
@@ -1830,9 +1830,9 @@ function setShowMode(mode){
 }
 function toggleArchived(){ setShowMode('archived'); }
 
-function openCouplePortal(id){ window.open(`https://amy-cate.com/group.html?w=${id}`,'_blank'); }
+function openCouplePortal(id){ window.open(`https://christophercrm.pages.dev/group.html?w=${id}`,'_blank'); }
 function copyCoupleLink(id){
-  const url=`https://amy-cate.com/group.html?w=${id}`;
+  const url=`https://christophercrm.pages.dev/group.html?w=${id}`;
   navigator.clipboard.writeText(url).then(()=>alert('Couple link copied!\n\n'+url)).catch(()=>prompt('Copy this link:',url));
 }
 
@@ -2149,7 +2149,7 @@ async function backupToDrive() {
 
     const backup = {
       exportedAt: new Date().toISOString(),
-      exportedBy: 'Amy Cate CRM',
+      exportedBy: 'Christopher CRM',
       version: 'v4',
       weddings:  wSnap.docs.map(d=>({id:d.id,...d.data()})),
       guests:    gSnap.docs.map(d=>({id:d.id,...d.data()})),
@@ -2908,7 +2908,7 @@ function qbRenderRooms() {
     <p style="font-size:.82rem;color:#888;margin-bottom:12px;">${hasKids ? 'With kids: enter total cost for the whole room.' : 'Check rooms to include. Enter total room cost — per person auto-calculates.'}</p>`;
 
   Object.entries(categories).forEach(([cat, photos]) => {
-    const galleryUrl = `https://amy-cate.com/gallery?gallery=${encodeURIComponent(qbSlug)}&cat=${encodeURIComponent(cat)}`;
+    const galleryUrl = `https://christophercrm.pages.dev/gallery?gallery=${encodeURIComponent(qbSlug)}&cat=${encodeURIComponent(cat)}`;
     const photoOptions = photos.map((p,i) => {
       const url = p.url || p.downloadURL || '';
       return `<label style="cursor:pointer;display:inline-block;margin-right:6px;margin-bottom:4px;vertical-align:top;position:relative;">
@@ -3354,7 +3354,7 @@ ${clubPerksBox}
 <tr><td style="background-color:#1a3a4a;padding:20px 40px;text-align:center;">
   <p style="margin:0 0 4px 0;font-family:Georgia,serif;font-size:13px;color:#c9a96e;letter-spacing:1px;">Amy Cate</p>
   <p style="margin:0 0 2px 0;font-family:Arial,sans-serif;font-size:11px;color:#a8c4d0;">Certified Destination Wedding &amp; Group Travel Specialist</p>
-  <p style="margin:0 0 6px 0;font-family:Arial,sans-serif;font-size:11px;color:#a8c4d0;">Destination Weddings Travel Group &amp; Celebration Travel</p>
+  <p style="margin:0 0 6px 0;font-family:Arial,sans-serif;font-size:11px;color:#a8c4d0;">Christopher CRM &amp; Celebration Travel</p>
   <a href="mailto:amy.cate@destinationweddings.com" style="font-family:Arial,sans-serif;font-size:11px;color:#c9a96e;text-decoration:none;">amy.cate@destinationweddings.com</a>
   <p style="margin:4px 0 0 0;font-family:Arial,sans-serif;font-size:10px;color:#6a8a9a;">Rates are subject to availability and may change until reserved with deposit. Flights not included. All pricing in USD.</p>
 </td></tr>
@@ -3442,11 +3442,11 @@ function importResortLibrary(event) {
 }
 
 function showQuoteResortModal() {
-  alert('To add resort photos, use the Resort Library page at amy-cate.com/resort-library.html');
+  alert('To add resort photos, use the Resort Library page at christophercrm.pages.dev/resort-library.html');
 }
 
 function showManageResortsModal() {
-  alert('To manage resort photos, use the Resort Library page at amy-cate.com/resort-library.html');
+  alert('To manage resort photos, use the Resort Library page at christophercrm.pages.dev/resort-library.html');
 }
 
 // ── Quote Mode Toggle ──
@@ -3893,7 +3893,7 @@ ${heroPhotos.length === 1 ? `<tr><td width="600" style="padding:0;line-height:0;
   <p style="font-family:Georgia,serif;font-size:13px;color:#B8973A;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px 0;">I cannot wait to hear what you think!</p>
   <p style="font-family:Georgia,serif;font-size:22px;font-weight:bold;color:#FFFFFF;margin:0 0 2px 0;">Amy M. Cate</p>
   <p style="font-family:Georgia,serif;font-size:12px;color:#B8973A;font-weight:600;letter-spacing:.05em;margin:0 0 12px 0;">Certified Destination Wedding &amp; Group Travel Specialist</p>
-  <p style="font-family:Georgia,serif;font-size:12px;color:#CCCCCC;margin:0 0 2px 0;">Destination Weddings Travel Group &amp; Celebration Travel</p>
+  <p style="font-family:Georgia,serif;font-size:12px;color:#CCCCCC;margin:0 0 2px 0;">Christopher CRM &amp; Celebration Travel</p>
   <p style="font-family:Georgia,serif;font-size:12px;color:#CCCCCC;margin:0 0 12px 0;">&#127942; DestiDiamond 2025 &nbsp;&bull;&nbsp; DestiRuby 2024 &nbsp;&bull;&nbsp; DestiStar 2022&ndash;2025</p>
   <a href="mailto:amy.cate@destinationweddings.com" style="font-family:Georgia,serif;font-size:13px;color:#B8973A;text-decoration:none;display:block;margin-bottom:4px;">amy.cate@destinationweddings.com</a>
   <p style="font-family:Georgia,serif;font-size:13px;color:#CCCCCC;margin:0 0 16px 0;">(832) 773-8664 &nbsp;&bull;&nbsp; M&ndash;TH 9&ndash;5 &nbsp;&bull;&nbsp; FRI 9&ndash;3 &nbsp;&bull;&nbsp; Weekends by appt</p>
@@ -4005,7 +4005,7 @@ function generateGroupReport(filter) {
       <span>✦ ${w.weddingDate || ''}</span>
       <span>✦ Generated: ${new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
     </div>
-    <div style="font-size:.82rem;color:#ccc;">${wGuests.length} rooms · Amy M. Cate · Destination Weddings Travel Group & Celebration Travel</div></div>
+    <div style="font-size:.82rem;color:#ccc;">${wGuests.length} rooms · Amy M. Cate · Christopher CRM & Celebration Travel</div></div>
     <div class="summary">
       <div class="stat"><div class="label">Rooms</div><div class="val">${wGuests.length}</div></div>
       <div class="stat"><div class="label">Total Cost</div><div class="val">${fmt(totalRoom + totalIns)}</div></div>
@@ -4086,7 +4086,7 @@ function generateRoomListingReport(filter){
     + '<span> '+(w.destination||'')+'</span>'
     + '<span> '+(w.weddingDate||'')+'</span>'
     + '<span> Generated: '+new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})+'</span></div>'
-    + '<div class="sub">'+wGuests.length+' rooms &middot; Amy M. Cate &middot; Destination Weddings Travel Group &amp; Celebration Travel</div></div>'
+    + '<div class="sub">'+wGuests.length+' rooms &middot; Amy M. Cate &middot; Christopher CRM &amp; Celebration Travel</div></div>'
     + '<table><thead><tr>'
     + '<th>Res #</th><th>Guest(s)</th><th>Arrival</th><th>Departure</th><th>Room Category</th><th>Notes</th>'
     + '</tr></thead><tbody>'+rows+'</tbody></table>'
@@ -5490,7 +5490,7 @@ async function exportFlightReportExcel(){
 // ════════════════════════════════════
 const AMY_SIGNATURE = `Amy M. Cate
 Certified Destination Wedding & Group Travel Specialist
-Destination Weddings Travel Group & Celebration Travel
+Christopher CRM & Celebration Travel
 (832) 773-8664
 Book a call with me: zcal.co/amymcate/letschat
 Office Hours: Monday–Thursday 9:00am–5:00pm, Friday 9:00am–3:00pm CST
@@ -5557,7 +5557,7 @@ ${AMY_SIGNATURE}`;
     progress.style.display = '';
     let sent=0, failed=0;
     for(const g of wGuests){
-      const flightLink = `https://amy-cate.com/flights.html?w=${currentWeddingId}&guest=${g.id}`;
+      const flightLink = `https://christophercrm.pages.dev/flights.html?w=${currentWeddingId}&guest=${g.id}`;
       const message = template.replace(/\[Name\]/g, g.names).replace(/\[Link\]/g, flightLink);
       progress.textContent = `Sending ${sent+failed+1} of ${wGuests.length} — ${g.names}…`;
       try{
@@ -5579,7 +5579,7 @@ async function sendGuestFlightEmail(guestId){
   const w = weddings.find(x=>x.id===currentWeddingId);
   if(!g||!w) return;
   const city = w.destination||'your destination';
-  const flightLink = `https://amy-cate.com/flights.html?w=${currentWeddingId}&guest=${guestId}`;
+  const flightLink = `https://christophercrm.pages.dev/flights.html?w=${currentWeddingId}&guest=${guestId}`;
   const message =
 `Hello ${g.names}!
 
@@ -6273,7 +6273,7 @@ function openStoredEmail(id){
 }
 
 // ── PASSWORD LOCK ──
-const CRM_PASSWORD = 'roxy';
+const CRM_PASSWORD = 'Cokerbill';
 function showLockScreen() {
   document.getElementById('app').style.display = 'none';
   let lock = document.getElementById('crm-lock-screen');
@@ -6283,8 +6283,8 @@ function showLockScreen() {
     lock.style.cssText = 'position:fixed;inset:0;background:#1a1a1a;display:flex;align-items:center;justify-content:center;z-index:99999;';
     lock.innerHTML = `<div style="text-align:center;color:white;">
       <div style="font-size:2rem;margin-bottom:8px">🔐</div>
-      <div style="font-family:serif;font-size:1.3rem;color:#c9a96e;margin-bottom:4px">✦ Amy Cate CRM</div>
-      <div style="font-size:.85rem;color:#888;margin-bottom:24px">Destination Weddings Travel Group</div>
+      <div style="font-family:serif;font-size:1.3rem;color:#c9a96e;margin-bottom:4px">✦ Christopher CRM</div>
+      <div style="font-size:.85rem;color:#888;margin-bottom:24px"></div>
       <input id="crm-pw-input" type="password" placeholder="Enter password" autofocus
         style="width:260px;padding:12px 16px;border-radius:8px;border:1px solid #444;background:#111;color:white;font-size:1rem;text-align:center;outline:none;display:block;margin:0 auto 12px;">
       <button onclick="submitLock()"
