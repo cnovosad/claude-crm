@@ -169,128 +169,7 @@ body{background:#111;color:#e8e8e8;font-family:'Inter',sans-serif;min-height:100
         <button id="allResortsBtn" onclick="filterResorts('all')" style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border:none;cursor:pointer;background:transparent;color:#888;">All Resorts</button>
       </div>
     <select class="form-control" id="masterResort" onchange="localStorage.setItem('lastResort',this.value);onMasterResortChange(this.value)" style="min-width:260px;background:#111;border:1px solid #f0c958;color:#f0c958;font-weight:600;">
-                        <option value="">Select resort...</option>
-      <option value="ava-resort-cancun">Ava Resort Cancun</option>
-      <option value="breathless-cabo-san-lucas-resort-spa">Breathless Cabo San Lucas Resort &amp; Spa</option>
-      <option value="breathless-punta-cana">Breathless Punta Cana Resort &amp; Spa</option>
-      <option value="breathless-riviera-cancun">Breathless Riviera Cancun Resort &amp; Spa</option>
-      <option value="dreams-aventuras">Dreams Aventuras Riviera Maya</option>
-      <option value="dreams-bahia-mita">Dreams Bahia Mita Surf &amp; Spa Resort</option>
-      <option value="dreams-cap-cana">Dreams Cap Cana Resort &amp; Spa</option>
-      <option value="dreams-curacao">Dreams Curacao Resort, Spa &amp; Casino</option>
-      <option value="dreams-dominicus-la-romana">Dreams Dominicus La Romana</option>
-      <option value="dreams-estrella-del-mar">Dreams Estrella del Mar Mazatlan Golf &amp; Spa Resort</option>
-      <option value="dreams-flora">Dreams Flora Resort &amp; Spa</option>
-      <option value="dreams-huatulco">Dreams Huatulco Resort &amp; Spa</option>
-      <option value="dreams-jade">Dreams Jade Resort &amp; Spa</option>
-      <option value="dreams-la-romana">Dreams La Romana Resort &amp; Spa</option>
-      <option value="dreams-los-cabos">Dreams Los Cabos Suites Golf Resort &amp; Spa</option>
-      <option value="dreams-macao">Dreams Macao Beach Punta Cana</option>
-      <option value="dreams-natura">Dreams Natura Resort &amp; Spa</option>
-      <option value="dreams-onyx">Dreams Onyx Resort &amp; Spa</option>
-      <option value="dreams-playa-esmeralda">Dreams Playa Esmeralda Resort &amp; Spa</option>
-      <option value="dreams-playa-mujeres">Dreams Playa Mujeres Golf &amp; Spa Resort</option>
-      <option value="dreams-puerto-morelos">Dreams Puerto Morelos Resort &amp; Spa</option>
-      <option value="dreams-riviera-cancun">Dreams Riviera Cancun Resort &amp; Spa</option>
-      <option value="dreams-rose-hall">Dreams Rose Hall Resort &amp; Spa</option>
-      <option value="dreams-royal-beach">Dreams Royal Beach Punta Cana</option>
-      <option value="dreams-sands-cancun">Dreams Sands Cancun Resort &amp; Spa</option>
-      <option value="dreams-sapphire">Dreams Sapphire Resort &amp; Spa</option>
-      <option value="dreams-tulum">Dreams Tulum Resort &amp; Spa</option>
-      <option value="dreams-vallarta-bay">Dreams Vallarta Bay Resort &amp; Spa</option>
-      <option value="dreams-vista-cancun">Dreams Vista Cancun Golf &amp; Spa Resort</option>
-      <option value="el-dorado-casitas">El Dorado Casitas Royale</option>
-      <option value="el-dorado-royale">El Dorado Royale</option>
-      <option value="family-selection-bavaro">Family Selection at Grand Palladium Bávaro</option>
-      <option value="fives-beach">Fives Beach Hotels &amp; Residences</option>
-      <option value="garza-blanca">Garza Blanca Preserve Resort &amp; Spa</option>
-      <option value="grand-hyatt-baha-mar">Grand Hyatt Baha Mar</option>
-      <option value="grand-palladium-bavaro">Grand Palladium Bávaro Resort &amp; Spa</option>
-      <option value="grand-palladium-colonial">Grand Palladium Colonial Resort &amp; Spa</option>
-      <option value="grand-palladium-jamaica">Grand Palladium Jamaica Resort &amp; Spa</option>
-      <option value="grand-palladium-kantenah">Grand Palladium Kantenah Resort &amp; Spa</option>
-      <option value="grand-palladium-lady-hamilton">Grand Palladium Lady Hamilton Resort &amp; Spa</option>
-      <option value="grand-palladium-palace">Grand Palladium Palace Resort Spa &amp; Casino</option>
-      <option value="grand-palladium-punta-cana">Grand Palladium Punta Cana Resort &amp; Spa</option>
-      <option value="grand-palladium-vallarta">Grand Palladium Vallarta Resort &amp; Spa</option>
-      <option value="grand-palladium-white-sand">Grand Palladium White Sand Resort &amp; Spa</option>
-      <option value="grand-velas-riviera-maya">Grand Velas Riviera Maya</option>
-      <option value="hard-rock-punta-cana">Hard Rock Hotel &amp; Casino Punta Cana</option>
-      <option value="hard-rock-los-cabos">Hard Rock Hotel Los Cabos</option>
-      <option value="hard-rock-riviera-maya">Hard Rock Hotel Riviera Maya</option>
-      <option value="hard-rock-vallarta">Hard Rock Hotel Vallarta</option>
-      <option value="haven-riviera-cancun">Haven Riviera Cancun</option>
-      <option value="hilton-los-cabos">Hilton Los Cabos Beach &amp; Golf Resort</option>
-      <option value="hilton-tulum-riviera-maya">Hilton Tulum Riviera Maya All-Inclusive</option>
-      <option value="hotel-xcaret-arte">Hotel Xcaret Arte</option>
-      <option value="hotel-xcaret-mexico">Hotel Xcaret México</option>
-      <option value="hyatt-zilara-cancun">Hyatt Zilara Cancun</option>
-      <option value="hyatt-zilara-cap-cana">Hyatt Zilara Cap Cana</option>
-      <option value="hyatt-zilara-riviera-maya">Hyatt Zilara Riviera Maya</option>
-      <option value="hyatt-zilara-rose-hall">Hyatt Zilara Rose Hall</option>
-      <option value="hyatt-vivid-cancun">Hyatt Vivid Grand Island Cancun</option>
-      <option value="hyatt-vivid-playa-del-carmen">Hyatt Vivid Grand Island Playa del Carmen</option>
-      <option value="hyatt-vivid-punta-cana">Hyatt Vivid Grand Island Punta Cana</option>
-      <option value="hyatt-ziva-cancun">Hyatt Ziva Cancun</option>
-      <option value="hyatt-ziva-cap-cana">Hyatt Ziva Cap Cana</option>
-      <option value="hyatt-ziva-los-cabos">Hyatt Ziva Los Cabos</option>
-      <option value="hyatt-ziva-puerto-vallarta">Hyatt Ziva Puerto Vallarta</option>
-      <option value="hyatt-ziva-rose-hall">Hyatt Ziva Rose Hall</option>
-      <option value="iberostar-selection-cancun">Iberostar Selection Cancun</option>
-      <option value="iberostar-waves-rose-hall-beach">Iberostar Waves Rose Hall Beach</option>
-      <option value="impression-isla-mujeres-by-secrets">Impression Isla Mujeres by Secrets</option>
-      <option value="le-blanc-spa-resort-los-cabos">Le Blanc Spa Resort Los Cabos</option>
-      <option value="majestic-elegance-costa-mujeres">Majestic Elegance Costa Mujeres</option>
-      <option value="majestic-mirage">Majestic Mirage Costa Mujeres</option>
-      <option value="majestic-mirage-punta-cana">Majestic Mirage Punta Cana</option>
-      <option value="margaritaville-island-reserve-riviera-maya">Margaritaville Island Reserve Resort Riviera Maya</option>
-      <option value="lopesan-costa-bavaro">Lopesan Costa Bávaro Resort, Spa &amp; Casino</option>
-      <option value="moon-palace-cancun">Moon Palace Cancun</option>
-      <option value="moon-palace-jamaica">Moon Palace Jamaica</option>
-      <option value="ocean-allure-costa-mujeres">Ocean Allure Costa Mujeres</option>
-      <option value="ocean-coral-spring">Ocean Coral Spring</option>
-      <option value="ocean-eden-bay">Ocean Eden Bay</option>
-      <option value="ocean-riviera-paradise">Ocean Riviera Paradise</option>
-      <option value="princess-grand-jamaica">Princess Grand Jamaica</option>
-      <option value="riu-cancun">Riu Cancun</option>
-      <option value="riu-latino">Riu Latino</option>
-      <option value="riu-montego-bay">Riu Montego Bay</option>
-      <option value="royalton-bavaro">Royalton Bavaro &ndash; An Autograph Collection</option>
-      <option value="royalton-chic-cancun">Royalton CHIC Cancun</option>
-      <option value="royalton-riviera-cancun">Royalton Riviera Cancun</option>
-      <option value="royalton-vessence-barbados">Royalton Vessence Barbados</option>
-      <option value="sandos-finisterra">Sandos Finisterra Los Cabos</option>
-      <option value="secrets-akumal">Secrets Akumal Riviera Maya</option>
-      <option value="secrets-aura-cozumel">Secrets Aura Cozumel</option>
-      <option value="secrets-baby-beach">Secrets Baby Beach Aruba</option>
-      <option value="secrets-bahia-mita-surf-spa-resort">Secrets Bahia Mita Surf &amp; Spa</option>
-      <option value="secrets-cap-cana">Secrets Cap Cana Resort &amp; Spa</option>
-      <option value="secrets-huatulco">Secrets Huatulco Resort &amp; Spa</option>
-      <option value="secrets-la-romana">Secrets La Romana Resort &amp; Spa</option>
-      <option value="secrets-maroma-beach">Secrets Maroma Beach Riviera Cancun</option>
-      <option value="secrets-mirabel-cancun">Secrets Mirabel Cancun Resort &amp; Spa</option>
-      <option value="secrets-papagayo">Secrets Papagayo Costa Rica</option>
-      <option value="secrets-playa-blanca">Secrets Playa Blanca Costa Mujeres</option>
-      <option value="secrets-playa-esmeralda">Secrets Playa Esmeralda Resort &amp; Spa</option>
-      <option value="secrets-playa-mujeres">Secrets Playa Mujeres Golf &amp; Spa Resort</option>
-      <option value="secrets-puerto-los-cabos">Secrets Puerto Los Cabos Golf &amp; Spa Resort</option>
-      <option value="secrets-riviera-cancun">Secrets Riviera Cancun Resort &amp; Spa</option>
-      <option value="secrets-royal-beach">Secrets Royal Beach Punta Cana</option>
-      <option value="secrets-st-james">Secrets St James Montego Bay</option>
-      <option value="secrets-st-lucia">Secrets St. Lucia Resort &amp; Spa</option>
-      <option value="secrets-the-vine">Secrets The Vine Cancun</option>
-      <option value="secrets-tides-punta-cana">Secrets Tides Punta Cana</option>
-      <option value="secrets-tulum">Secrets Tulum Resort &amp; Beach Club</option>
-      <option value="secrets-vallarta-bay">Secrets Vallarta Bay Puerto Vallarta</option>
-      <option value="secrets-wild-orchid">Secrets Wild Orchid Montego Bay</option>
-      <option value="signature-level-lady-hamilton">Signature Level at Grand Palladium Lady Hamilton</option>
-      <option value="trs-coral">TRS Coral Hotel</option>
-      <option value="trs-turquesa">TRS Turquesa</option>
-      <option value="trs-yucatan-hotel">TRS Yucatan Hotel</option>
-      <option value="valentin-imperial-riviera-maya">Valentin Imperial Riviera Maya</option>
-      <option value="velas-vallarta">Velas Vallarta</option>
-      <option value="viva-fortuna-beach">Viva Fortuna Beach by Wyndham</option>
-      <option value="other">Other Resort</option>
+      <option value="">Loading resorts...</option>
     </select>
     </div><!-- end resort select wrapper -->
   </div>
@@ -775,6 +654,53 @@ function removeQueueItem(id) {
   document.getElementById(id)?.remove();
 }
 
+// ── DYNAMIC RESORT DROPDOWN LOADER ──
+async function loadResortDropdown() {
+  const sel = document.getElementById('masterResort');
+  if (!sel) return;
+
+  try {
+    const snap = await db.collection('resortProfiles').orderBy('name').get();
+    sel.innerHTML = '<option value="">Select resort...</option>';
+
+    snap.forEach(doc => {
+      const d = doc.data();
+      const owner = d.owner || 'amy';
+      const name = d.name || d.resortName || doc.id;
+      const isOwn = owner === 'christopher';
+
+      const opt = document.createElement('option');
+      opt.value = doc.id;
+      opt.textContent = isOwn ? name : `${name} · ${owner.charAt(0).toUpperCase() + owner.slice(1)}`;
+      if (!isOwn) {
+        opt.style.color = '#888';
+        opt.style.fontStyle = 'italic';
+      }
+      sel.appendChild(opt);
+    });
+
+    // Add Other Resort option
+    const other = document.createElement('option');
+    other.value = 'other';
+    other.textContent = 'Other Resort';
+    sel.appendChild(other);
+
+    // Restore last selected resort
+    const last = localStorage.getItem('lastResort');
+    if (last && [...sel.options].some(o => o.value === last)) {
+      sel.value = last;
+      setTimeout(() => onMasterResortChange(last), 300);
+    }
+
+    // Init filter after dropdown is loaded
+    setTimeout(() => initResortFilter(), 500);
+
+  } catch(e) {
+    console.warn('Failed to load resort dropdown:', e);
+    sel.innerHTML = '<option value="">Error loading resorts</option>';
+  }
+}
+
 // ── RESORT FILTER (My Resorts / All Resorts) ──
 let myResortSlugs = new Set();
 
@@ -1131,7 +1057,7 @@ function openVenuePhotoPicker(inputEl) {
         // a photo that fails to load removes its own tile, so no blank gaps
         return `<div onclick="selectVenuePhoto('${safeUrl}',this)" style="cursor:pointer;border-radius:8px;overflow:hidden;border:2px solid transparent;transition:border .15s;background:#F3EEE3;" title="${cap}">
           <div style="height:170px;background:#E8E0D0;">
-            <img src="${url}" style="width:100%;height:170px;object-fit:cover;display:block;"
+            <img src="${url}" alt="${cap || 'Untitled'}" title="${cap || ''}" style="width:100%;height:170px;object-fit:cover;display:block;"
                  onerror="this.closest('div[onclick]').remove()">
           </div>
           <div style="font-size:.76rem;color:#3B342E;padding:7px 9px;line-height:1.35;background:#FFFDF8;min-height:34px;">${cap || 'Untitled'}</div>
@@ -1169,7 +1095,7 @@ function openRoomCatPhotoPicker(inputEl) {
         const cap = p.caption || p.category || '';
         const safeUrl = url.replace(/'/g,"\\'");
         return `<div onclick="selectRoomCatPhoto('${safeUrl}')" style="cursor:pointer;border-radius:8px;overflow:hidden;border:2px solid transparent;background:#F3EEE3;" title="${cap}">
-          <img src="${url}" style="width:100%;height:170px;object-fit:cover;display:block;"
+          <img src="${url}" alt="${cap || 'Untitled'}" title="${cap || ''}" style="width:100%;height:170px;object-fit:cover;display:block;"
                onerror="this.closest('div[onclick]').remove()">
           <div style="font-size:.76rem;color:#3B342E;padding:7px 9px;line-height:1.35;background:#FFFDF8;min-height:34px;">${cap || 'Untitled'}</div>
         </div>`;
@@ -1467,8 +1393,10 @@ async function saveResortProfile() {
   // OWNERSHIP CHECK — only Amy can save Amy's resorts (Amy can override anything as Firebase owner)
   const existingDoc = await db.collection('resortProfiles').doc(slug).get();
   const existingOwner = existingDoc.exists ? (existingDoc.data().owner || 'amy') : 'amy';
-  // Amy is the Firebase owner — she can edit anything
-  // No ownership restriction for Amy's library
+  if (existingOwner !== 'christopher') {
+    toast('This is ' + existingOwner + '\'s resort — view only.', 'error');
+    return;
+  }
 
   const masterSel = document.getElementById('masterResort');
   const resortName = masterSel?.options[masterSel.selectedIndex]?.text || slug;
@@ -2083,19 +2011,10 @@ loadPhotos();
 initProfileResortDropdown();
 initFilterResortDropdown();
 
-// Auto-restore last selected resort from localStorage
+// Auto-load resort dropdown dynamically from Firestore
 (function() {
-  const last = localStorage.getItem('lastResort');
-  if (last) {
-    const sel = document.getElementById('masterResort');
-    if (sel && [...sel.options].some(o => o.value === last)) {
-      sel.value = last;
-      // Wait for Firebase to be ready then load
-      setTimeout(() => onMasterResortChange(last), 800);
-    }
-  }
-  // Initialize resort filter after Firebase ready
-  setTimeout(() => initResortFilter(), 1200);
+  // Wait for Firebase to be ready then load dropdown
+  setTimeout(() => loadResortDropdown(), 1000);
 })();
 
 // ── RESORT AUDIT ──
@@ -4084,5 +4003,101 @@ footer{border-top:1px solid var(--line);padding:2.2rem 0 3.2rem;color:var(--mute
 #venuePhotoGrid > div{ align-self:start !important; }
 #venuePhotoGrid > div img{ height:170px !important; object-fit:cover !important; }
 </style>
+
+<script id="acPullPhotos">
+/* "Pull photos from this record" — copies any photo URL sitting on the resort
+   profile (rooms, venues, packages, pools, dining, banners, hero) into the
+   photo library, so the picker can see them. Skips anything already there. */
+(function(){
+  function slug(){ var s=document.getElementById('masterResort'); return s ? s.value : ''; }
+
+  function css(){
+    if(document.getElementById('acPullCss'))return;
+    var st=document.createElement('style'); st.id='acPullCss';
+    st.textContent=
+      '#acPullBtn{background:#3F3A32;color:#F2EDE4;border:0;border-radius:6px;padding:9px 18px;'
+      +'font-family:system-ui,sans-serif;font-size:.84rem;font-weight:600;cursor:pointer;margin-left:10px;}'
+      +'#acPullBtn:hover{background:#2C2822;}'
+      +'#acPullBtn:disabled{opacity:.6;cursor:default;}'
+      +'#acPullMsg{font-size:.8rem;color:#5C5347;margin-left:10px;font-family:system-ui,sans-serif;}';
+    document.head.appendChild(st);
+  }
+
+  async function pull(btn,msg){
+    var sg=slug();
+    if(!sg){ msg.textContent='Pick a resort first.'; return; }
+    btn.disabled=true; msg.textContent='Looking\u2026';
+    try{
+      var db=firebase.firestore();
+      var prof=(await db.collection('resortProfiles').doc(sg).get()).data()||{};
+      var nm=prof.name||prof.resortName||sg;
+      var t=function(v){return String(v==null?'':v).trim();};
+      var arr=function(v){return Array.isArray(v)?v:[];};
+      var snap=await db.collection('resortPhotos').where('resortSlug','==',sg).get();
+      var have={}; snap.forEach(function(d){var v=d.data();var u=t(v.url||v.downloadURL); if(u)have[u]=1;});
+
+      var found=[], empty=[];
+      function add(url,caption,category,roomCategory){
+        url=t(url); if(!url||have[url])return;
+        have[url]=1;
+        found.push({url:url,caption:caption||'',category:category,roomCategory:roomCategory||''});
+      }
+      var vs=arr(prof.venues), ps=arr(prof.packages), pl=arr(prof.pools),
+          rs=arr(prof.restaurants), rc=arr(prof.roomCategories);
+      vs.forEach(function(v){add(v&&v.photo,v&&v.name,'Wedding Venues');});
+      ps.forEach(function(x){add(x&&x.photo,x&&x.name,'Wedding Venues');});
+      pl.forEach(function(x){add(x&&x.photo,x&&x.name,'Pools & Beach');});
+      rs.forEach(function(x){add(x&&x.photo,x&&x.name,'Dining');});
+      rc.forEach(function(x){add(x&&x.photo,x&&x.name,'Rooms & Suites',x&&x.name);});
+      add(prof.heroPhoto,nm+' hero','Resort & Property');
+      var sp=prof.sectionPhotos||{};
+      Object.keys(sp).forEach(function(k){add(sp[k],nm+' '+k+' banner','Resort & Property');});
+      arr(prof.photos).forEach(function(u){add(u,'','Resort & Property');});
+
+      // tell her which sections had nothing to give
+      function none(list){ return list.length && !list.filter(function(x){return x&&t(x.photo);}).length; }
+      if(none(pl)) empty.push('pools');
+      if(none(rs)) empty.push('restaurants');
+      if(none(vs)) empty.push('venues');
+      if(none(rc)) empty.push('rooms');
+
+      if(!found.length){
+        msg.textContent='Nothing new \u2014 the library already has everything on this record.'
+          + (empty.length ? ' No photos on: '+empty.join(', ')+'.' : '');
+        btn.disabled=false; return;
+      }
+      for(var i=0;i<found.length;i++){
+        var f=found[i];
+        await db.collection('resortPhotos').add({
+          resortSlug:sg, resortName:nm, resort:nm,
+          url:f.url, downloadURL:f.url,
+          caption:f.caption, category:f.category, roomCategory:f.roomCategory,
+          source:'pulled from profile', uploadedAt:new Date().toISOString()
+        });
+      }
+      msg.textContent='Added '+found.length+'.'
+        + (empty.length ? ' No photos on: '+empty.join(', ')+'.' : '')
+        + ' Reload to see them.';
+      if(typeof toast==='function')toast('Added '+found.length+' photos to the library.','success');
+    }catch(e){ console.warn(e); msg.textContent='Failed \u2014 see the console.'; }
+    btn.disabled=false;
+  }
+
+  function mount(){
+    if(document.getElementById('acPullBtn'))return;
+    var anchor=document.getElementById('filterCategory');
+    if(!anchor)return;
+    css();
+    var b=document.createElement('button');
+    b.id='acPullBtn'; b.type='button'; b.textContent='\u2b07 Pull photos from this record';
+    var m=document.createElement('span'); m.id='acPullMsg';
+    b.onclick=function(){ pull(b,m); };
+    anchor.parentNode.insertBefore(b, anchor.nextSibling);
+    anchor.parentNode.insertBefore(m, b.nextSibling);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(mount,1500);});
+  else setTimeout(mount,1500);
+})();
+</script>
 </body>
 </html>
