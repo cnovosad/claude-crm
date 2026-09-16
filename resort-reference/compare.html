@@ -16,6 +16,50 @@ firebase.initializeApp({apiKey:"AIzaSyAlYgdkcl7ZuRL2pXJ7BObGuQyxMdVH4Js",authDom
 const db=firebase.firestore();
 firebase.auth().signInAnonymously().catch(e=>console.warn('Auth:',e));
 </script>
+<!-- READ-ONLY GUARD: Christopher can read Amy's resort library but never change it.
+     Anything whose id ends in -chris is his own and stays fully editable. -->
+<script>
+(function(){
+  try{
+    if(!window.firebase||!firebase.firestore)return;
+    var PROTECTED=/^(resortProfiles|resortPhotos|roomDescriptions)$/;
+    var MINE=/-chris$/;
+    function refused(what){
+      var msg='This belongs to Amy\u2019s library and is read-only here. '+
+              'Copy the resort to your own record first (its id must end in -chris).';
+      try{if(window.toast)toast(msg,'error');else console.warn(msg);}catch(e){console.warn(msg);}
+      return Promise.reject(new Error('Read-only: '+what));
+    }
+    var DR=firebase.firestore.DocumentReference.prototype;
+    var _set=DR.set,_update=DR.update,_delete=DR.delete;
+    function locked(ref){
+      try{return PROTECTED.test(ref.parent.id)&&!MINE.test(ref.id);}catch(e){return false;}
+    }
+    DR.set=function(){return locked(this)?refused(this.parent.id+'/'+this.id):_set.apply(this,arguments);};
+    DR.update=function(){return locked(this)?refused(this.parent.id+'/'+this.id):_update.apply(this,arguments);};
+    DR.delete=function(){return locked(this)?refused(this.parent.id+'/'+this.id):_delete.apply(this,arguments);};
+    var CR=firebase.firestore.CollectionReference.prototype;
+    var _add=CR.add;
+    CR.add=function(data){
+      try{
+        if(this.id==='resortPhotos'&&!MINE.test(String((data||{}).resortSlug||'')))
+          return refused('a photo on one of Amy\u2019s resorts');
+        if(PROTECTED.test(this.id)&&this.id!=='resortPhotos')
+          return refused(this.id);
+      }catch(e){}
+      return _add.apply(this,arguments);
+    };
+    var WB=firebase.firestore.WriteBatch&&firebase.firestore.WriteBatch.prototype;
+    if(WB){
+      var _bs=WB.set,_bu=WB.update,_bd=WB.delete;
+      WB.set=function(ref){return locked(ref)?this:_bs.apply(this,arguments);};
+      WB.update=function(ref){return locked(ref)?this:_bu.apply(this,arguments);};
+      WB.delete=function(ref){return locked(ref)?this:_bd.apply(this,arguments);};
+    }
+  }catch(e){console.warn('guard not installed',e);}
+})();
+</script>
+
 <style>
 :root{--ivory:#FBF8F3;--sand:#F1E9DD;--sand-deep:#E4D8C6;--espresso:#1A1510;--ink:#2A241F;--gold:#8B6914;--gold-soft:#A07E3A;--sea:#4A7A76;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;}
 *{box-sizing:border-box;}body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;}
