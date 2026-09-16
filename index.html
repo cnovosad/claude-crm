@@ -3143,7 +3143,7 @@ function qbGenerate() {
     name: div.querySelector('.qb-kid-name')?.value?.trim() || '',
     age:  div.querySelector('.qb-kid-age')?.value || ''
   })).filter(k => k.name || k.age) : [];
-  const bookingLink    = document.getElementById('qb-booking-link')?.value?.trim() || 'https://zcal.co/amymcate/letschat';
+  const bookingLink    = document.getElementById('qb-booking-link')?.value?.trim() || 'mailto:cnovosad@destinationweddings.com';
   const clubName       = document.getElementById('qb-club-name')?.value?.trim() || '';
   const clubPerks      = document.getElementById('qb-club-perks')?.value?.trim() || '';
   const resortInfoLink   = document.getElementById('qb-resort-info-link')?.value?.trim() || '';
@@ -3351,16 +3351,16 @@ ${clubPerksBox}
 
   <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;"><tr><td align="center">
     <p style="margin:0 0 16px 0;font-family:Arial,sans-serif;font-size:13px;color:#444444;text-align:center;">Ready to reserve your spot? Questions? I&rsquo;m here!</p>
-    ${bookingLink && bookingLink !== '#' ? `<a href="${bookingLink}" style="display:inline-block;background-color:#1a3a4a;color:#ffffff;font-family:Arial,sans-serif;font-size:13px;font-weight:bold;padding:13px 32px;text-decoration:none;border-radius:3px;letter-spacing:1px;">SECURE MY SPOT</a>` : `<a href="mailto:amy.cate@destinationweddings.com" style="display:inline-block;background-color:#1a3a4a;color:#ffffff;font-family:Arial,sans-serif;font-size:13px;font-weight:bold;padding:13px 32px;text-decoration:none;border-radius:3px;letter-spacing:1px;">CONTACT ME TO BOOK</a>`}
+    ${bookingLink && bookingLink !== '#' ? `<a href="${bookingLink}" style="display:inline-block;background-color:#1a3a4a;color:#ffffff;font-family:Arial,sans-serif;font-size:13px;font-weight:bold;padding:13px 32px;text-decoration:none;border-radius:3px;letter-spacing:1px;">SECURE MY SPOT</a>` : `<a href="mailto:cnovosad@destinationweddings.com" style="display:inline-block;background-color:#1a3a4a;color:#ffffff;font-family:Arial,sans-serif;font-size:13px;font-weight:bold;padding:13px 32px;text-decoration:none;border-radius:3px;letter-spacing:1px;">CONTACT ME TO BOOK</a>`}
   </td></tr></table>
 
 </td></tr>
 
 <tr><td style="background-color:#1a3a4a;padding:20px 40px;text-align:center;">
-  <p style="margin:0 0 4px 0;font-family:Georgia,serif;font-size:13px;color:#c9a96e;letter-spacing:1px;">Amy Cate</p>
+  <p style="margin:0 0 4px 0;font-family:Georgia,serif;font-size:13px;color:#c9a96e;letter-spacing:1px;">Christopher Novosad</p>
   <p style="margin:0 0 2px 0;font-family:Arial,sans-serif;font-size:11px;color:#a8c4d0;">Certified Destination Wedding &amp; Group Travel Specialist</p>
   <p style="margin:0 0 6px 0;font-family:Arial,sans-serif;font-size:11px;color:#a8c4d0;">Christopher CRM &amp; Celebration Travel</p>
-  <a href="mailto:amy.cate@destinationweddings.com" style="font-family:Arial,sans-serif;font-size:11px;color:#c9a96e;text-decoration:none;">amy.cate@destinationweddings.com</a>
+  <a href="mailto:cnovosad@destinationweddings.com" style="font-family:Arial,sans-serif;font-size:11px;color:#c9a96e;text-decoration:none;">cnovosad@destinationweddings.com</a>
   <p style="margin:4px 0 0 0;font-family:Arial,sans-serif;font-size:10px;color:#6a8a9a;">Rates are subject to availability and may change until reserved with deposit. Flights not included. All pricing in USD.</p>
 </td></tr>
 
@@ -3517,7 +3517,7 @@ function qbGenerateWedding(travelMode) {
   const resortDesc = document.getElementById('qb-desc-text')?.value?.trim() || '';
   const highlights = document.getElementById('qb-highlights')?.value?.trim() || '';
   const customIntro= document.getElementById('qb-intro')?.value?.trim() || '';
-  const bookingLink= document.getElementById('qb-booking-link')?.value?.trim() || 'https://zcal.co/amymcate/letschat';
+  const bookingLink= document.getElementById('qb-booking-link')?.value?.trim() || 'mailto:cnovosad@destinationweddings.com';
   const resortInfoLink   = document.getElementById('qb-resort-info-link')?.value?.trim() || '';
   const showPayment      = document.getElementById('qb-include-payment')?.checked || false;
   const weddingDeposit   = document.getElementById('qb-deposit')?.value?.trim() || '';
@@ -3887,7 +3887,7 @@ ${heroPhotos.length === 1 ? `<tr><td width="600" style="padding:0;line-height:0;
     <tr><td style="padding:22px 28px;text-align:center;">
       <p style="font-family:Georgia,serif;font-size:15px;font-weight:bold;color:#0A0A0A;margin:0 0 8px 0;">Ready to take the next step?</p>
       <p style="font-family:Georgia,serif;font-size:13px;color:#0A0A0A;margin:0 0 16px 0;">${travelMode?`Tap the button below and let&rsquo;s get your${resortName?' '+resortName:''} trip booked!`:`Book a quick call with me and let&rsquo;s start planning your${resortName?' '+resortName:''} wedding!`}</p>
-      <table cellpadding="0" cellspacing="0" border="0" align="center"><tr><td bgcolor="#0A0A0A" style="background-color:#0A0A0A;"><a href="${travelMode?bookingLink:'https://zcal.co/amymcate/letschat'}" style="display:block;color:#B8973A;font-family:Georgia,serif;font-size:13px;font-weight:bold;padding:12px 28px;text-decoration:none;mso-padding-alt:0;white-space:nowrap;">${travelMode?'&#128203; Book Your Trip &rarr;':'&#128197; Book a Call With Me!'}</a></td></tr></table>
+      <table cellpadding="0" cellspacing="0" border="0" align="center"><tr><td bgcolor="#0A0A0A" style="background-color:#0A0A0A;"><a href="${travelMode?bookingLink:'mailto:cnovosad@destinationweddings.com'}" style="display:block;color:#B8973A;font-family:Georgia,serif;font-size:13px;font-weight:bold;padding:12px 28px;text-decoration:none;mso-padding-alt:0;white-space:nowrap;">${travelMode?'&#128203; Book Your Trip &rarr;':'&#128197; Book a Call With Me!'}</a></td></tr></table>
     </td></tr>
   </table>
 
@@ -3896,13 +3896,13 @@ ${heroPhotos.length === 1 ? `<tr><td width="600" style="padding:0;line-height:0;
 <!-- FOOTER -->
 <tr><td bgcolor="#0A0A0A" style="background-color:#0A0A0A;padding:30px 40px;text-align:center;border-top:4px solid #B8973A;">
   <p style="font-family:Georgia,serif;font-size:13px;color:#B8973A;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px 0;">I cannot wait to hear what you think!</p>
-  <p style="font-family:Georgia,serif;font-size:22px;font-weight:bold;color:#FFFFFF;margin:0 0 2px 0;">Amy M. Cate</p>
+  <p style="font-family:Georgia,serif;font-size:22px;font-weight:bold;color:#FFFFFF;margin:0 0 2px 0;">Christopher Novosad</p>
   <p style="font-family:Georgia,serif;font-size:12px;color:#B8973A;font-weight:600;letter-spacing:.05em;margin:0 0 12px 0;">Certified Destination Wedding &amp; Group Travel Specialist</p>
   <p style="font-family:Georgia,serif;font-size:12px;color:#CCCCCC;margin:0 0 2px 0;">Christopher CRM &amp; Celebration Travel</p>
   <p style="font-family:Georgia,serif;font-size:12px;color:#CCCCCC;margin:0 0 12px 0;">&#127942; DestiDiamond 2025 &nbsp;&bull;&nbsp; DestiRuby 2024 &nbsp;&bull;&nbsp; DestiStar 2022&ndash;2025</p>
-  <a href="mailto:amy.cate@destinationweddings.com" style="font-family:Georgia,serif;font-size:13px;color:#B8973A;text-decoration:none;display:block;margin-bottom:4px;">amy.cate@destinationweddings.com</a>
+  <a href="mailto:cnovosad@destinationweddings.com" style="font-family:Georgia,serif;font-size:13px;color:#B8973A;text-decoration:none;display:block;margin-bottom:4px;">cnovosad@destinationweddings.com</a>
   <p style="font-family:Georgia,serif;font-size:13px;color:#CCCCCC;margin:0 0 16px 0;">(832) 773-8664 &nbsp;&bull;&nbsp; M&ndash;TH 9&ndash;5 &nbsp;&bull;&nbsp; FRI 9&ndash;3 &nbsp;&bull;&nbsp; Weekends by appt</p>
-  <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin-bottom:16px;"><tr><td bgcolor="#B8973A" style="background-color:#B8973A;"><a href="https://zcal.co/amymcate/letschat" style="display:block;color:#0A0A0A;font-family:Georgia,serif;font-size:13px;font-weight:bold;padding:12px 28px;text-decoration:none;mso-padding-alt:0;white-space:nowrap;">&#128197; Book a Call With Me!</a></td></tr></table>
+  <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin-bottom:16px;"><tr><td bgcolor="#B8973A" style="background-color:#B8973A;"><a href="mailto:cnovosad@destinationweddings.com" style="display:block;color:#0A0A0A;font-family:Georgia,serif;font-size:13px;font-weight:bold;padding:12px 28px;text-decoration:none;mso-padding-alt:0;white-space:nowrap;">&#128197; Book a Call With Me!</a></td></tr></table>
   <p style="font-family:Georgia,serif;font-size:11px;color:#737373;margin:0;">Prices are estimates and subject to change. Not a confirmed booking. All pricing in USD.</p>
 </td></tr>
 
@@ -4010,7 +4010,7 @@ function generateGroupReport(filter) {
       <span>✦ ${w.weddingDate || ''}</span>
       <span>✦ Generated: ${new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
     </div>
-    <div style="font-size:.82rem;color:#ccc;">${wGuests.length} rooms · Amy M. Cate · Christopher CRM & Celebration Travel</div></div>
+    <div style="font-size:.82rem;color:#ccc;">${wGuests.length} rooms · Christopher Novosad · Christopher CRM & Celebration Travel</div></div>
     <div class="summary">
       <div class="stat"><div class="label">Rooms</div><div class="val">${wGuests.length}</div></div>
       <div class="stat"><div class="label">Total Cost</div><div class="val">${fmt(totalRoom + totalIns)}</div></div>
@@ -4032,7 +4032,7 @@ function generateGroupReport(filter) {
       <td style="padding:10px 8px;font-size:.82rem;text-align:right;color:#b8973a;">${fmt(totalComm)}</td>
       <td></td>
     </tr></tfoot></table>
-    <div class="footer">Amy M. Cate · Certified Destination Wedding & Group Travel Specialist · (832) 773-8664 · amy.cate@destinationweddings.com</div>
+    <div class="footer">Christopher Novosad · Certified Destination Wedding & Group Travel Specialist · (832) 773-8664 · cnovosad@destinationweddings.com</div>
     </body></html>`;
 
   const win = window.open('', '_blank');
@@ -4091,11 +4091,11 @@ function generateRoomListingReport(filter){
     + '<span> '+(w.destination||'')+'</span>'
     + '<span> '+(w.weddingDate||'')+'</span>'
     + '<span> Generated: '+new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})+'</span></div>'
-    + '<div class="sub">'+wGuests.length+' rooms &middot; Amy M. Cate &middot; Christopher CRM &amp; Celebration Travel</div></div>'
+    + '<div class="sub">'+wGuests.length+' rooms &middot; Christopher Novosad &middot; Christopher CRM &amp; Celebration Travel</div></div>'
     + '<table><thead><tr>'
     + '<th>Res #</th><th>Guest(s)</th><th>Arrival</th><th>Departure</th><th>Room Category</th><th>Notes</th>'
     + '</tr></thead><tbody>'+rows+'</tbody></table>'
-    + '<div class="footer">Amy M. Cate &middot; Certified Destination Wedding &amp; Group Travel Specialist &middot; (832) 773-8664 &middot; amy.cate@destinationweddings.com</div>'
+    + '<div class="footer">Christopher Novosad &middot; Certified Destination Wedding &amp; Group Travel Specialist &middot; (832) 773-8664 &middot; cnovosad@destinationweddings.com</div>'
     + '</body></html>';
 
   const win = window.open('','_blank');
@@ -5245,7 +5245,7 @@ async function sendFlightNotification(guestId, flightData){
     });
 
     const templateParams = {
-      to_email: 'amy.cate@destinationweddings.com',
+      to_email: 'cnovosad@destinationweddings.com',
       wedding_name: w.names,
       resort: w.resort,
       guest_name: g.names,
@@ -5384,7 +5384,7 @@ ${(()=>{
 })()}
 
 <div class="footer">
-  Prepared by Amy Cate · amy.cate@destinationweddings.com · Destination Weddings / Celebration Travel
+  Prepared by Christopher Novosad · cnovosad@destinationweddings.com · Destination Weddings / Celebration Travel
 </div>
 
 </body></html>`;
@@ -5478,7 +5478,7 @@ async function exportFlightReportExcel(){
     }
   });
   R+=2; ws.mergeCells('A'+R+':J'+R);
-  ws.getCell('A'+R).value='Prepared by Amy Cate  \u00b7  amy.cate@destinationweddings.com  \u00b7  Destination Weddings / Celebration Travel';
+  ws.getCell('A'+R).value='Prepared by Christopher Novosad  \u00b7  cnovosad@destinationweddings.com  \u00b7  Destination Weddings / Celebration Travel';
   ws.getCell('A'+R).font={name:'Arial',italic:true,size:8,color:{argb:GREY}};
 
   const slug=(w.names||'group').replace(/[^a-z0-9]+/gi,'-').replace(/^-+|-+$/g,'');
@@ -5493,11 +5493,11 @@ async function exportFlightReportExcel(){
 // ════════════════════════════════════
 // SEND FLIGHT REQUEST EMAILS
 // ════════════════════════════════════
-const AMY_SIGNATURE = `Amy M. Cate
+const AMY_SIGNATURE = `Christopher Novosad
 Certified Destination Wedding & Group Travel Specialist
 Christopher CRM & Celebration Travel
 (832) 773-8664
-Book a call with me: zcal.co/amymcate/letschat
+Book a call with me: mailto:cnovosad@destinationweddings.com
 Office Hours: Monday–Thursday 9:00am–5:00pm, Friday 9:00am–3:00pm CST
 Weekends by appointment`;
 
@@ -5690,8 +5690,8 @@ Please don't hesitate to reach out if you have any questions!
 
 Thank you so much!
 
-Amy Cate
-amy.cate@destinationweddings.com
+Christopher Novosad
+cnovosad@destinationweddings.com
 (832) 773-8664`);
 
   if (recipientEmail) {
