@@ -1731,7 +1731,7 @@ const GMAIL_CLIENT_ID='882555042901-27paoapr7arebi9ej64sqpitbjqg38ku.apps.google
   }catch(e){}
 })();
 
-const AGENT_SIG={name:'Christopher Novosad',title:'Certified Destination Wedding & Group Travel Specialist',brands:'Destination Weddings Travel Group & Celebration Travel',email:'cnovosad@destinationweddings.com',phone:'',hours:'Office Hours: Monday\u2013Thursday 9:00am\u20135:00pm, Friday 9:00am\u20133:00pm CST',hours2:'Weekends by appointment',call:'https://calendly.com/cnovosad-destinationweddings/30min',address:'945 Concord Street | Framingham, MA | 01701',sigImage:'https://christophercrm.pages.dev/resort-reference/photos/signature.png'};
+const AGENT_SIG={name:'Christopher Novosad',title:'Certified Destination Wedding & Group Travel Specialist',brands:'Destination Weddings Travel Group & Celebration Travel',email:'cnovosad@destinationweddings.com',phone:'(832) 316-4709',hours:'Office Hours: Monday\u2013Thursday 9:00am\u20135:00pm, Friday 9:00am\u20133:00pm CST',hours2:'Weekends by appointment',call:'https://calendly.com/cnovosad-destinationweddings/30min',address:'945 Concord Street | Framingham, MA | 01701',sigImage:'https://christophercrm.pages.dev/resort-reference/photos/signature.png'};
 function sigHtml(){const S=AGENT_SIG;const F='font-family:Helvetica,Arial,sans-serif;';const SERIF='font-family:Georgia,\'Times New Roman\',serif;';
   return'<table role="presentation" cellpadding="0" cellspacing="0" style="max-width:640px;margin-top:28px;border-top:1px solid #4A7A76;"><tr><td style="padding-top:18px;">'+
   '<div style="'+F+'font-size:15px;color:#2A241F;margin-bottom:10px;">Best regards,</div>'+
@@ -1751,7 +1751,7 @@ function mimeMessage(to,subject,text,html){const b='b'+Math.random().toString(36
 async function ebGmailDraft(){const m=$id('eb-msg');const to=$id('eb-to').value.trim(),subject=$id('eb-subject').value,body=$id('eb-body').value;gmailFlash('Signing in\u2026 (a Google window should open; if nothing opens, check for a blocked pop-up in the address bar)');
   try{const token=await gmailToken();window.GMAIL_TOKEN=token;gmailFlash('Signed in \u2014 creating the draft\u2026');
     let who='';
-    const html='<div style="background:#FBF8F3;padding:6px 0;">'+ebToHtml(body)+sigHtml()+'</div>';const text=body+'\n\nBest regards,\n'+AGENT_SIG.name+'\n'+AGENT_SIG.title+'\n'+AGENT_SIG.brands+'\n'+AGENT_SIG.email+(AGENT_SIG.phone?'\n'+AGENT_SIG.phone:'')+(AGENT_SIG.call?'\n'+AGENT_SIG.call:'');
+    const html='<div style="background:#FBF8F3;padding:6px 0;">'+ebToHtml(body)+sigHtml()+'</div>';const text=body+'\n\nBest regards,\n'+AGENT_SIG.name+'\n'+AGENT_SIG.title+'\n'+AGENT_SIG.brands+'\n'+AGENT_SIG.email+(AGENT_SIG.phone?'\n'+AGENT_SIG.phone:'(832) 316-4709')+(AGENT_SIG.call?'\n'+AGENT_SIG.call:'');
     const raw=b64url(mimeMessage(to,subject,text,html));
     const r=await fetch('https://gmail.googleapis.com/gmail/v1/users/me/drafts',{method:'POST',headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify({message:{raw}})});
     if(!r.ok){const e=await r.json().catch(()=>({}));if(r.status===403||r.status===401)window.GMAIL_TOKEN=null;throw new Error((e.error&&e.error.message)||('HTTP '+r.status));}
