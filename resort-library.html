@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Resort Photo Library &mdash; Amy Cate CRM</title>
+<title>Resort Photo Library &mdash; Christopher Novosad CRM</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -142,7 +142,7 @@ body{background:#111;color:#e8e8e8;font-family:'Inter',sans-serif;min-height:100
 
 <!-- NAV -->
 <nav class="nav">
-  <span class="nav-logo">&#10022; Amy Cate CRM</span>
+  <span class="nav-logo">&#10022; Christopher Novosad CRM</span>
   <a href="index.html"    class="nav-link">Dashboard</a>
   <a href="index.html#weddings" class="nav-link">Weddings</a>
   <a href="index.html#guests"   class="nav-link">Guests</a>
@@ -333,7 +333,7 @@ body{background:#111;color:#e8e8e8;font-family:'Inter',sans-serif;min-height:100
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
         <div class="form-group">
           <label>Gallery Link</label>
-          <input type="url" class="form-control" id="profileGalleryLink" placeholder="https://amy-cate.com/gallery?gallery=...">
+          <input type="url" class="form-control" id="profileGalleryLink" placeholder="https://christophercrm.pages.dev/gallery?gallery=...">
         </div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
@@ -1681,7 +1681,7 @@ function renderGallery(photos) {
 
   grid.innerHTML = Object.values(groups).sort((a,b) => (a.resortName||'').localeCompare(b.resortName||'')).map(g => {
     const n = g.photos.length;
-    const galleryUrl = `https://amy-cate.com/gallery?gallery=${encodeURIComponent(g.slug)}&cat=${encodeURIComponent(g.cat)}`;
+    const galleryUrl = `https://christophercrm.pages.dev/gallery?gallery=${encodeURIComponent(g.slug)}&cat=${encodeURIComponent(g.cat)}`;
 
     const photoCards = g.photos.map(p => `
       <div class="photo-card" id="card_${p.id}">
@@ -3093,7 +3093,7 @@ footer{border-top:1px solid var(--line);padding:2.2rem 0 3.2rem;color:var(--mute
   +'document.getElementById(x.getAttribute("aria-controls")).hidden=!on;});}'
   +'b.forEach(function(x){x.addEventListener("click",function(){sel(x.id);});});'
   +'if(location.hash==="#groups"){sel("tab-grp");}})();\n<\/script>\n\n'
-  +'<footer><div class="wrap">\n  <p>Amy Cate &middot; Destination Weddings Travel Group &amp; Celebration Travel &middot; amy.cate@destinationweddings.com</p>\n'
+  +'<footer><div class="wrap">\n  <p>Christopher Novosad &middot; Destination Weddings Travel Group &amp; Celebration Travel &middot; cnovosad@destinationweddings.com</p>\n'
   +'  <p>Details drawn from the resort&rsquo;s published information and subject to change. Availability and rates are confirmed at the time of booking.</p>\n</div></footer>\n\n</body>\n</html>\n';
  }
 
@@ -3123,7 +3123,7 @@ footer{border-top:1px solid var(--line);padding:2.2rem 0 3.2rem;color:var(--mute
    var slug=sel&&sel.value;
    if(!slug){alert('Pick a resort first.');return;}
    // build it from the live guide, so the static page matches the real one
-   window.open('https://amy-cate.com/resort-reference/resort.html?r='+
+   window.open('https://christophercrm.pages.dev/resort-reference/resort.html?r='+
      encodeURIComponent(slug)+'&download=1','_blank');
   };
   bar.insertBefore(b, bar.querySelector('button'));
