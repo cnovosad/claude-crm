@@ -3143,7 +3143,7 @@ function qbGenerate() {
     name: div.querySelector('.qb-kid-name')?.value?.trim() || '',
     age:  div.querySelector('.qb-kid-age')?.value || ''
   })).filter(k => k.name || k.age) : [];
-  const bookingLink    = document.getElementById('qb-booking-link')?.value?.trim() || 'mailto:cnovosad@destinationweddings.com';
+  const bookingLink    = document.getElementById('qb-booking-link')?.value?.trim() || 'https://calendly.com/cnovosad-destinationweddings/30min';
   const clubName       = document.getElementById('qb-club-name')?.value?.trim() || '';
   const clubPerks      = document.getElementById('qb-club-perks')?.value?.trim() || '';
   const resortInfoLink   = document.getElementById('qb-resort-info-link')?.value?.trim() || '';
@@ -3517,7 +3517,7 @@ function qbGenerateWedding(travelMode) {
   const resortDesc = document.getElementById('qb-desc-text')?.value?.trim() || '';
   const highlights = document.getElementById('qb-highlights')?.value?.trim() || '';
   const customIntro= document.getElementById('qb-intro')?.value?.trim() || '';
-  const bookingLink= document.getElementById('qb-booking-link')?.value?.trim() || 'mailto:cnovosad@destinationweddings.com';
+  const bookingLink= document.getElementById('qb-booking-link')?.value?.trim() || 'https://calendly.com/cnovosad-destinationweddings/30min';
   const resortInfoLink   = document.getElementById('qb-resort-info-link')?.value?.trim() || '';
   const showPayment      = document.getElementById('qb-include-payment')?.checked || false;
   const weddingDeposit   = document.getElementById('qb-deposit')?.value?.trim() || '';
@@ -3887,7 +3887,7 @@ ${heroPhotos.length === 1 ? `<tr><td width="600" style="padding:0;line-height:0;
     <tr><td style="padding:22px 28px;text-align:center;">
       <p style="font-family:Georgia,serif;font-size:15px;font-weight:bold;color:#0A0A0A;margin:0 0 8px 0;">Ready to take the next step?</p>
       <p style="font-family:Georgia,serif;font-size:13px;color:#0A0A0A;margin:0 0 16px 0;">${travelMode?`Tap the button below and let&rsquo;s get your${resortName?' '+resortName:''} trip booked!`:`Book a quick call with me and let&rsquo;s start planning your${resortName?' '+resortName:''} wedding!`}</p>
-      <table cellpadding="0" cellspacing="0" border="0" align="center"><tr><td bgcolor="#0A0A0A" style="background-color:#0A0A0A;"><a href="${travelMode?bookingLink:'mailto:cnovosad@destinationweddings.com'}" style="display:block;color:#B8973A;font-family:Georgia,serif;font-size:13px;font-weight:bold;padding:12px 28px;text-decoration:none;mso-padding-alt:0;white-space:nowrap;">${travelMode?'&#128203; Book Your Trip &rarr;':'&#128197; Book a Call With Me!'}</a></td></tr></table>
+      <table cellpadding="0" cellspacing="0" border="0" align="center"><tr><td bgcolor="#0A0A0A" style="background-color:#0A0A0A;"><a href="${travelMode?bookingLink:'https://calendly.com/cnovosad-destinationweddings/30min'}" style="display:block;color:#B8973A;font-family:Georgia,serif;font-size:13px;font-weight:bold;padding:12px 28px;text-decoration:none;mso-padding-alt:0;white-space:nowrap;">${travelMode?'&#128203; Book Your Trip &rarr;':'&#128197; Book a Call With Me!'}</a></td></tr></table>
     </td></tr>
   </table>
 
@@ -3902,7 +3902,7 @@ ${heroPhotos.length === 1 ? `<tr><td width="600" style="padding:0;line-height:0;
   <p style="font-family:Georgia,serif;font-size:12px;color:#CCCCCC;margin:0 0 12px 0;">&#127942; DestiDiamond 2025 &nbsp;&bull;&nbsp; DestiRuby 2024 &nbsp;&bull;&nbsp; DestiStar 2022&ndash;2025</p>
   <a href="mailto:cnovosad@destinationweddings.com" style="font-family:Georgia,serif;font-size:13px;color:#B8973A;text-decoration:none;display:block;margin-bottom:4px;">cnovosad@destinationweddings.com</a>
   <p style="font-family:Georgia,serif;font-size:13px;color:#CCCCCC;margin:0 0 16px 0;">(832) 773-8664 &nbsp;&bull;&nbsp; M&ndash;TH 9&ndash;5 &nbsp;&bull;&nbsp; FRI 9&ndash;3 &nbsp;&bull;&nbsp; Weekends by appt</p>
-  <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin-bottom:16px;"><tr><td bgcolor="#B8973A" style="background-color:#B8973A;"><a href="mailto:cnovosad@destinationweddings.com" style="display:block;color:#0A0A0A;font-family:Georgia,serif;font-size:13px;font-weight:bold;padding:12px 28px;text-decoration:none;mso-padding-alt:0;white-space:nowrap;">&#128197; Book a Call With Me!</a></td></tr></table>
+  <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin-bottom:16px;"><tr><td bgcolor="#B8973A" style="background-color:#B8973A;"><a href="https://calendly.com/cnovosad-destinationweddings/30min" style="display:block;color:#0A0A0A;font-family:Georgia,serif;font-size:13px;font-weight:bold;padding:12px 28px;text-decoration:none;mso-padding-alt:0;white-space:nowrap;">&#128197; Book a Call With Me!</a></td></tr></table>
   <p style="font-family:Georgia,serif;font-size:11px;color:#737373;margin:0;">Prices are estimates and subject to change. Not a confirmed booking. All pricing in USD.</p>
 </td></tr>
 
