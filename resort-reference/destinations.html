@@ -141,7 +141,7 @@ async function run(){
     (d.tip?'<h3>My tip</h3><p class="copy">'+esc(d.tip)+'</p>':'')+
     (rl.length&&!(d.parts||[]).length?'<div class="resorts"><p class="eyebrow" style="margin-bottom:6px;">Resorts I work with here</p>'+rl.filter(r=>r.ok).map(r=>'<a href="'+esc(guide+'?r='+r.slug)+'">'+esc(r.name)+'</a>').join('')+(rl.some(r=>!r.ok)?'<p style="font-size:13px;opacity:.7;margin:10px 0 0;">Also: '+rl.filter(r=>!r.ok).map(r=>esc(r.name)).join(', ')+'.</p>':'')+'</div>':'')+
     '</div></section>';}).join('');
-  $('foot').innerHTML='<p>Tell me the two or three that sound right and I\u2019ll price real resorts for your dates \u2014 reply to the email, or <a href="CHRIS_BOOKING_LINK_HERE">grab a time</a>. How working with me looks: <a href="CHRIS_ABOUT_LINK_HERE">work-with-amy-dwt.netlify.app</a>.</p><p style="opacity:.7;font-size:13px;">Flight times are typical non-stop or one-stop from Houston; other cities vary. Weather and entry rules change \u2014 I check the current picture before you book.</p>';
+  $('foot').innerHTML='<p>Tell me the two or three that sound right and I\u2019ll price real resorts for your dates \u2014 reply to the email, or <a href="CHRIS_BOOKING_LINK_HERE">grab a time</a>. How working with me looks: <a # style="opacity:.7;font-size:13px;">Flight times are typical non-stop or one-stop from Houston; other cities vary. Weather and entry rules change \u2014 I check the current picture before you book.</p>';
   if(location.hash){const el=document.querySelector(location.hash);if(el)setTimeout(()=>el.scrollIntoView(),200);}
 }
 firebase.auth().onAuthStateChanged(run);
