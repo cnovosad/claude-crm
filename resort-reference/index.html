@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resort Reference — Christopher Novosad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#1E1A14; --gold:#B8975A; --gold-deep:#95763E;
+  --cream:#FAF7F2; --cream-2:#F3EDE3; --line:#E4DACA;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--cream); color:var(--black);
+  font-family:'Jost',sans-serif; font-weight:300;
+  font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.15}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 32px}
+
+.eyebrow{
+  font-family:'Jost',sans-serif;font-size:11px;font-weight:500;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);
+  margin-bottom:14px;
+}
+
+header.top{padding:76px 0 44px;border-bottom:1px solid var(--line)}
+header.top h1{font-size:clamp(38px,6vw,64px)}
+header.top p{margin-top:14px;color:#5A5045;max-width:640px;font-size:16.5px}
+
+.audbar{
+  display:flex;gap:0;margin-top:26px;border-bottom:1px solid var(--line);
+}
+.audbtn{
+  appearance:none;background:none;border:0;border-bottom:2px solid transparent;
+  font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:.2em;
+  text-transform:uppercase;color:#8A7C68;padding:12px 22px 10px;cursor:pointer;
+  transition:color .15s, border-color .15s;
+}
+.audbtn:hover{color:var(--black)}
+.audbtn[aria-selected="true"]{color:var(--gold-deep);border-bottom-color:var(--gold)}
+.audhint{
+  margin-top:14px;font-size:14.5px;color:#7A6E60;min-height:1.4em;
+}
+@media(max-width:560px){.audbtn{padding:11px 14px 9px;letter-spacing:.14em}}
+.count{
+  margin-top:24px;font-size:11px;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:#8A7C68;
+}
+
+main{padding:48px 0 24px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+
+.card{
+  display:block;background:#fff;border:1px solid var(--line);
+  padding:28px 30px 26px;transition:border-color .18s ease, transform .18s ease;
+}
+.card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.card .region{
+  font-size:10.5px;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold-deep);margin-bottom:9px;
+}
+.card h2{font-size:27px;margin-bottom:9px}
+.card p{font-size:14.5px;color:#5A5045;line-height:1.6}
+.tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:7px}
+
+.open{
+  margin-top:18px;font-size:11px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);
+}
+
+footer{
+  margin-top:56px;padding:36px 0 60px;
+  border-top:1px solid var(--line);color:#8A7C68;font-size:13.5px;
+}
+footer strong{font-weight:500;color:#5A5045}
+
+@media(max-width:760px){
+  .wrap{padding:0 20px}
+  .grid{grid-template-columns:1fr}
+  header.top{padding:52px 0 34px}
+}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+.top{padding:54px 0 22px;text-align:center;}
+.top .eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px;}
+.top h1{font-size:clamp(38px,6vw,60px);font-weight:400;line-height:1.05;letter-spacing:-.01em;}
+.top p.lede{max-width:660px;margin:16px auto 0;font-size:16.5px;line-height:1.65;color:#4A443C;}
+.top p.lede strong{color:var(--gold-deep);font-weight:400;}
+.tools{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;padding:26px 0 8px;border-bottom:1px solid var(--line);}
+.tools input{font-family:'Jost',sans-serif;font-size:15px;padding:10px 14px;border:1px solid var(--line);background:#fff;min-width:260px;}
+.chip{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:9px 16px;border:1px solid var(--line);background:#fff;cursor:pointer;transition:.2s;}
+.chip:hover{border-color:var(--gold);}
+.chip.on{background:var(--gold);border-color:var(--gold);color:#fff;}
+.dest{padding:40px 0 6px;}
+.dest h2{font-size:27px;font-weight:400;}
+.dest .cnt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-top:4px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(272px,1fr));gap:24px;margin-top:22px;}
+.card{background:#fff;border:1px solid var(--line);text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:.22s;}
+.card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 10px 26px rgba(30,26,20,.08);}
+.card:hover h3{color:var(--gold-deep);}
+.card .ph{aspect-ratio:4/3;background:var(--cream-2) center/cover no-repeat;}
+.card .bd{padding:17px 18px 19px;flex:1;display:flex;flex-direction:column;}
+.card h3{font-size:20px;font-weight:400;line-height:1.25;}
+.card .loc{font-size:12.5px;letter-spacing:.02em;color:#7A7266;margin-top:4px;font-weight:300;}
+.card .tag{border:none!important;padding:0!important;letter-spacing:normal!important;font-weight:300!important;font-size:12.5px;color:#6B6254;margin-top:8px;line-height:1.5;flex:1;text-transform:none;font-weight:300;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.card .meta{margin-top:11px;font-size:11.5px;color:#7A7266;display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
+.pill{font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);padding:3px 9px;}
+.pill.adults{border-color:var(--gold);color:var(--gold-deep);}
+.state{text-align:center;padding:70px 0;color:#6B6254;}
+.foot{margin-top:56px;border-top:1px solid var(--line);padding:30px 0 54px;text-align:center;font-size:12.5px;color:#6B6254;}
+.foot a{color:var(--gold-deep);}
+
+#gate{position:fixed;inset:0;background:var(--cream);z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;}
+#gate .box{max-width:400px;width:100%;text-align:center;}
+#gate .eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px;}
+#gate h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:40px;font-weight:400;line-height:1.1;}
+#gate p{font-size:14.5px;color:#5A5248;margin-top:12px;line-height:1.6;}
+#gate form{margin-top:22px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;}
+#gate input{font-family:'Jost',sans-serif;font-size:16px;padding:12px 14px;border:1px solid var(--line);background:#fff;min-width:200px;text-align:center;}
+#gate button{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:12px 22px;border:1px solid var(--gold);background:var(--gold);color:#fff;cursor:pointer;}
+#gate button:hover{background:var(--gold-deep);border-color:var(--gold-deep);}
+#gate .no{color:#A33;font-size:13px;margin-top:12px;min-height:18px;}
+.dests{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;padding:30px 0 6px;}
+.dbox{position:relative;border:1px solid #6E6152;background:#3A332B;padding:19px 18px 17px;cursor:pointer;text-align:center;font-family:'Jost',sans-serif;transition:.24s;overflow:hidden;}
+.dbox::before{content:'';position:absolute;inset:5px;border:1px solid rgba(176,141,87,.34);pointer-events:none;transition:.24s;}
+.dbox:hover{background:#2E2821;border-color:var(--gold);transform:translateY(-2px);box-shadow:0 8px 20px rgba(30,26,20,.18);}
+.dbox:hover::before{inset:7px;border-color:rgba(176,141,87,.65);}
+.dbox.on{background:var(--gold-deep);border-color:var(--gold-deep);}
+.dbox.on::before{border-color:rgba(255,255,255,.4);}
+.dbox .n{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:400;line-height:1.22;color:#F7F2E9;letter-spacing:.01em;}
+.dbox .c{display:block;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(214,196,167,.78);margin-top:7px;}
+.dbox.on .n{color:#fff;}
+.dbox.on .c{color:rgba(255,255,255,.8);}
+.ask{margin:22px 0 2px;background:#3A332B;position:relative;}
+.ask::before{content:'';position:absolute;inset:6px;border:1px solid rgba(176,141,87,.34);pointer-events:none;}
+.ask-in{padding:16px 18px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;justify-content:center;}
+.ask-q{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;color:#F7F2E9;font-weight:400;white-space:nowrap;}
+.ask-s{display:none;}
+.ask-f{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0;}
+.ask-f input{font-family:'Jost',sans-serif;font-size:13px;padding:8px 11px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#F7F2E9;min-width:130px;}
+.ask-f input::placeholder{color:rgba(247,242,233,.5);}
+.ask-f input:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.14);}
+.ask-btn{margin:0;font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;border:1px solid var(--gold);padding:10px 20px;cursor:pointer;transition:.22s;white-space:nowrap;}
+.ask-btn:hover{background:#F7F2E9;color:#3A332B;}
+.ask-btn.done{background:transparent;color:#F7F2E9;border-color:rgba(255,255,255,.45);cursor:default;}
+.ask-note{font-size:12px;color:rgba(247,242,233,.85);margin:0;flex-basis:100%;text-align:center;}
+</style></head><body>
+<div id="gate"><div class="box"><p class="eyebrow">Christopher Novosad &middot; Destination Weddings</p><h1>Resort Reference</h1><p>This library is shared with my couples. Enter the word I gave you to take a look.</p><form onsubmit="return gateGo(event)"><input id="gk" type="password" autocomplete="off" placeholder="Enter the word" autofocus><button type="submit">Enter</button></form><p class="no" id="gno"></p></div></div>
+<div class="wrap">
+  <div class="top">
+    <p class="eyebrow">Christopher Novosad &middot; Destination Weddings</p>
+    <h1 id="idxtitle">Resort Reference</h1>
+    <p class="lede" id="lede">Not a brochure. This is what I&rsquo;ve seen, asked about and checked myself &mdash; which venue holds your whole group, which package actually includes dinner, and what the photos leave out. <strong>Tap any resort to read the full guide.</strong></p>
+  </div>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Search a resort or destination&hellip;" autocomplete="off">
+    <button class="chip on" data-f="all">All</button>
+    <button class="chip" data-f="adults">Adults only</button>
+    <button class="chip" data-f="family">Family friendly</button>
+  </div>
+  <div id="dests" class="dests"></div>
+  <div id="out"><p class="state">Loading the library&hellip;</p></div>
+  <div class="foot">
+    <p>Amy M. Cate &middot; Certified Destination Wedding &amp; Group Travel Specialist</p>
+    <p style="margin-top:6px;"><a href="mailto:CHRIS_EMAIL_HERE">CHRIS_EMAIL_HERE</a> &middot; <a href="CHRIS_BOOKING_LINK_HERE">Book a call</a></p>
+    <p style="margin-top:14px;max-width:640px;margin-left:auto;margin-right:auto;font-size:11.5px;opacity:.85;">Details come from the most recent information each resort has published. Resorts change packages, venues and pricing without notice &mdash; treat this as a guide while you choose, and I&rsquo;ll confirm everything for your dates.</p>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script>
+
+/* Shared-word gate. The word itself is what's remembered, so changing WORD
+   below locks out everyone who used the old one. Not real security — a deterrent. */
+(function(){
+  var WORD='amycate';
+  var KEY='acr';
+  var saved='';try{saved=localStorage.getItem(KEY)||sessionStorage.getItem(KEY)||'';}catch(e){}
+  var q=new URLSearchParams(location.search).get('k')||'';
+  var open=(saved.toLowerCase().trim()===WORD)||(q.toLowerCase().trim()===WORD);
+  if(open){try{localStorage.setItem(KEY,WORD);}catch(_){}
+    var g=document.getElementById('gate');if(g)g.remove();}
+  window.gateGo=function(e){
+    e.preventDefault();
+    var v=(document.getElementById('gk').value||'').toLowerCase().trim();
+    if(v===WORD){try{localStorage.setItem(KEY,WORD);}catch(_){}
+      var g=document.getElementById('gate');if(g)g.remove();return false;}
+    document.getElementById('gno').textContent='That\u2019s not it \u2014 try again, or ask me for the current word.';
+    return false;};
+})();
+
+firebase.initializeApp({apiKey:"AIzaSyAlYgdkcl7ZuRL2pXJ7BObGuQyxMdVH4Js",authDomain:"wedding-crm-e5d12.firebaseapp.com",projectId:"wedding-crm-e5d12",storageBucket:"wedding-crm-e5d12.firebasestorage.app",messagingSenderId:"246819649586",appId:"1:246819649586:web:a74debd217ce048d26242b"});
+const db=firebase.firestore();
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ok=v=>v&&/^https?:/.test(String(v));
+const ORDER=['Canc\u00fan, Riviera Maya & Tulum, Mexico','Los Cabos, Mexico','Puerto Vallarta, Mexico','Dominican Republic','Jamaica','Costa Rica','Aruba','Cura\u00e7ao','St. Lucia','Antigua','Grenada','Bahamas','Other'];
+let ALL=[],F='all',Q='',D='all';
+const SHOWPRICE=/^(1|true)$/i.test(new URLSearchParams(location.search).get('prices')||'');
+const CTMODE=/^(1|true|ct)$/i.test(new URLSearchParams(location.search).get('ct')||'');
+const TAG=(function(){
+  // Remember who this is. Once someone arrives on a tagged link, keep the tag on
+  // that device so later visits without it are still attributed to them.
+  var t=(new URLSearchParams(location.search).get('c')||'').slice(0,60);
+  try{
+    if(t){localStorage.setItem('ac_who',t);return t;}
+    return localStorage.getItem('ac_who')||'';
+  }catch(e){return t;}
+})();
+const PASS=(new URLSearchParams(location.search).get('k')||'');
+
+function isAdults(p){
+  const nm=String(p.name||p._id||'');
+  // anything stated on the record wins over the brand rule
+  const _ap=String(p.agePolicy||'');
+  if(/adults?[ -]?only|18\+/i.test(_ap))return true;
+  if(/family|all ages/i.test(_ap))return false;
+  // Brand decides, not the description
+  if(/\b(dreams|sunscape|ziva|margaritaville|riu ventura|riu latino|ava)\b/i.test(nm)||/hard rock|hilton/i.test(nm))return false;
+  if(/\bcatalonia\b/i.test(nm))return false;
+  if(/\b(secrets|breathless|zilara|vivid|impression|excellence|hideaway|chic|atelier|unico|temptation|desire|trs)\b/i.test(nm))return true;
+  const ap=String(p.agePolicy||'');
+  if(/adults?[ -]?only|18\+/i.test(ap))return true;
+  if(/family|all ages|children|kids/i.test(ap))return false;
+  const blob=[p.name,p._id,p.description,p.tagline,p.kidsInfo].join(' ');
+  if(/adults?[ -]?only|18 and over|18\+/i.test(blob))return true;
+  return /\b(secrets|breathless|zilara|excellence|hideaway|chic|temptation|desire|live aqua beach)\b/i.test(String(p.name||p._id||''));
+}
+function regionOf(p){
+  const d=String(p.destination||'')+' '+String(p.name||'');
+  if(/costa mujeres|playa mujeres|canc|riviera maya|playa del carmen|akumal|tulum|puerto morelos|cozumel|maroma|xcaret|isla mujeres/i.test(d))return 'Canc\u00fan, Riviera Maya & Tulum, Mexico';
+  if(/los cabos|cabo san lucas|san jos\u00e9 del cabo|san jose del cabo|baja/i.test(d))return 'Los Cabos, Mexico';
+  if(/vallarta|nayarit|bah\u00eda de banderas|bahia mita|punta mita|mita/i.test(d))return 'Puerto Vallarta, Mexico';
+  if(/punta cana|cap cana|bavaro|b\u00e1varo|la romana|dominican|macao|uvero|esmeralda/i.test(d))return 'Dominican Republic';
+  if(/jamaica|montego|negril|ocho rios|falmouth/i.test(d))return 'Jamaica';
+  if(/costa rica|papagayo|guanacaste|liberia/i.test(d))return 'Costa Rica';
+  if(/aruba|baby beach|palm beach|eagle beach|oranjestad/i.test(d))return 'Aruba';
+  if(/st\.? ?lucia|saint lucia|castries|soufri/i.test(d))return 'St. Lucia';
+  if(/cura\u00e7ao|curacao|willemstad|mangrove beach|the rif/i.test(d))return 'Cura\u00e7ao';
+  if(/bahamas|nassau|paradise island|freeport|grand bahama|baha mar|viva fortuna|exuma|abaco|eleuthera/i.test(d))return 'Bahamas';
+  if(/antigua|st\.? ?john\u2019?s|dickenson bay/i.test(d))return 'Antigua';
+  if(/grenada|st\.? ?george|grand anse/i.test(d))return 'Grenada';
+  return 'Other';
+}
+function destOf(p){
+  const d=String(p.destination||'').trim();
+  if(/jamaica/i.test(d))return 'Jamaica';
+  if(/dominican|punta cana|cap cana|la romana|bavaro/i.test(d))return 'Dominican Republic';
+  if(/mexico|cancun|canc\u00fan|riviera|cabo|vallarta|nayarit|tulum|playa|cozumel|mujeres|akumal/i.test(d))return 'Mexico';
+  return d||'Other';
+}
+function hero(p){
+  const c=[p.heroPhoto,(p.sectionPhotos||{}).venues,(p.sectionPhotos||{}).pools,(p.photos||[])[0]];
+  return c.find(ok)||'';
+}
+function tagline(p){
+  const t=String(p.tagline||p.shortDescription||p.description||'').trim();
+  if(!t)return '';
+  let first=t.split(/(?<=[.!?])\s/)[0];
+  const letters=first.replace(/[^A-Za-z]/g,'');
+  if(letters&&letters===letters.toUpperCase())first=first.toLowerCase().replace(/(^|[.!?]\s+)([a-z])/g,(m,a,b)=>a+b.toUpperCase());
+  return first.length>132?first.slice(0,132).replace(/[,;\s]\S*$/,'')+'\u2026':first;
+}
+function card(p){
+  const img=hero(p);
+  const bits=[];
+  if(!CTMODE&&(p.venues||[]).length)bits.push((p.venues||[]).length+' wedding venues');
+  if((p.restaurants||[]).length)bits.push((p.restaurants||[]).length+' restaurants');
+  if((p.roomCategories||[]).length)bits.push((p.roomCategories||[]).length+' room types');
+  return '<a class="card" href="./resort?r='+encodeURIComponent(p._id)+'&quote=true&pv=1'+(SHOWPRICE?'':'&np=1')+(CTMODE?'&ct=1':'')+(TAG?'&c='+encodeURIComponent(TAG):'')+(PASS?'&k='+encodeURIComponent(PASS):'')+'">'
+    +'<div class="ph"'+(img?' style="background-image:url(\''+esc(img)+'\')"':'')+'></div>'
+    +'<div class="bd"><h3>'+esc(p.name||p._id)+'</h3>'
+    +(p.destination?'<p class="loc">'+esc(p.destination)+'</p>':'')
+    +(tagline(p)?'<p class="tag">'+esc(tagline(p))+'</p>':'')
+    +'<div class="meta">'+(isAdults(p)?'<span class="pill adults">Adults only</span>':'<span class="pill">Family friendly</span>')
+    +(bits.length?'<span>'+esc(bits.join(' \u00b7 '))+'</span>':'')+'</div></div></a>';
+}
+function draw(){
+  const q=Q.toLowerCase();
+  const list=ALL.filter(p=>{
+    const ad=isAdults(p);
+    if(D!=='all'&&regionOf(p)!==D)return false;
+    if(F==='adults'&&!ad)return false;
+    if(F==='family'&&ad)return false;
+    if(!q)return true;
+    return (String(p.name||'')+' '+String(p.destination||'')).toLowerCase().includes(q);
+  });
+  if(!list.length){document.getElementById('out').innerHTML='<p class="state">Nothing matches that \u2014 try another word.</p>';return;}
+  const groups={};list.forEach(p=>{const d=regionOf(p);(groups[d]=groups[d]||[]).push(p);});
+  const keys=Object.keys(groups).sort((a,b)=>{const i=ORDER.indexOf(a),j=ORDER.indexOf(b);return (i<0?99:i)-(j<0?99:j)||a.localeCompare(b);});
+  document.getElementById('out').innerHTML=keys.map(k=>
+    '<section class="dest"><h2>'+esc(k)+'</h2><p class="cnt">'+groups[k].length+' resort'+(groups[k].length===1?'':'s')+'</p>'
+    +'<div class="grid">'+groups[k].sort((a,b)=>String(a.name||'').localeCompare(String(b.name||''))).map(card).join('')+'</div></section>').join('');
+}
+function drawDests(){
+  const R={};ALL.forEach(p=>{const r=regionOf(p);R[r]=(R[r]||0)+1;});
+  const ORD=['Canc\u00fan, Riviera Maya & Tulum, Mexico','Los Cabos, Mexico','Puerto Vallarta, Mexico','Dominican Republic','Jamaica','Costa Rica','Aruba','Cura\u00e7ao','St. Lucia','Antigua','Grenada','Bahamas','Other'];
+  const keys=Object.keys(R).sort((a,b)=>{const i=ORD.indexOf(a),j=ORD.indexOf(b);return (i<0?99:i)-(j<0?99:j);});
+  const box=document.getElementById('dests');if(!box)return;
+  box.innerHTML='<button class="dbox'+(D==='all'?' on':'')+'" data-d="all"><span class="n">Everywhere</span><span class="c">'+ALL.length+' resorts</span></button>'
+    +keys.map(k=>'<button class="dbox'+(D===k?' on':'')+'" data-d="'+esc(k)+'"><span class="n">'+esc(k)+'</span><span class="c">'+R[k]+' resort'+(R[k]===1?'':'s')+'</span></button>').join('');
+  box.querySelectorAll('.dbox').forEach(b=>b.onclick=()=>{D=b.dataset.d;drawDests();draw();window.scrollTo({top:box.offsetTop-16,behavior:'smooth'});});
+}
+document.getElementById('q').addEventListener('input',e=>{Q=e.target.value;draw();});
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');F=b.dataset.f;draw();}));
+
+if(CTMODE){const t=document.getElementById('idxtitle');if(t)t.textContent='Resorts I Love';
+  const l0=document.getElementById('lede');if(l0)l0.textContent='The resorts I know well \u2014 the rooms, the food, the pools and what it actually feels like to be there. Tap any one to have a proper look.';
+  const e=document.querySelector('.top .eyebrow');if(e)e.textContent='Christopher Novosad \u00b7 Celebration Travel';}
+if(SHOWPRICE){const l=document.getElementById('lede');if(l)l.insertAdjacentHTML('afterend','<p style="margin-top:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);">Pricing version</p>');}
+
+/* Visit log — a timestamp, which version, and where the link came from.
+   Nothing personal, nothing identifying. One entry per visit. */
+function logVisit(){
+  try{
+    var last=0;try{last=parseInt(sessionStorage.getItem('acv')||'0',10);}catch(e){}
+    if(Date.now()-last<1800000)return;            // one entry per half hour per session
+    try{sessionStorage.setItem('acv',String(Date.now()));}catch(e){}
+    db.collection('libraryVisits').add({
+      at:new Date().toISOString(),
+      version:(CTMODE?'CT \u00b7 ':'')+(SHOWPRICE?'with pricing':'no pricing'),
+      sentTo:TAG,
+      tagSource:(new URLSearchParams(location.search).get('c')?'link':(TAG?'remembered':'')),
+      from:(document.referrer||'').slice(0,120),
+      device:/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)?'phone or tablet':'computer',
+      returning:(function(){try{var r=localStorage.getItem('acv1')==='1';localStorage.setItem('acv1','1');return r;}catch(e){return false;}})()
+    });
+  }catch(e){}
+}
+
+
+
+
+logVisit();
+db.collection('resortProfiles').get().then(s=>{
+  ALL=s.docs.filter(d=>!/-(maggie|chris)$/.test(d.id)).map(d=>Object.assign({_id:d.id},d.data()))
+    .filter(p=>{
+      if(!p.name||p.hideFromLibrary)return false;
+      const a=k=>Array.isArray(p[k])?p[k]:[];
+      const pic=v=>v&&/^https?:/.test(String(v));
+      if(CTMODE){
+        // A group trip does not need a wedding venue — it needs the resort to look good.
+        const rooms=a('roomCategories'),din=a('restaurants');
+        const shots=rooms.filter(x=>x&&pic(x.photo)).length
+                  +din.filter(x=>x&&pic(x.photo)).length
+                  +a('pools').filter(x=>x&&pic(x.photo)).length
+                  +a('bars').filter(x=>x&&pic(x.photo)).length
+                  +a('photos').filter(pic).length;
+        return pic(p.heroPhoto)&&rooms.length&&din.length&&shots>=6;
+      }
+      // Weddings: it has to answer where, what it costs, and what the week looks like.
+      const priced=a('packages').some(x=>x&&/\$\s?\d|complimentary|free|included/i.test(String(x.price||'')));
+      const docs=a('documents').filter(x=>x&&pic(x.url));
+      const pkgDoc=docs.some(x=>/package|wedding guide|sell sheet|catalog|booklet|collection|sales guide/i.test(x.label||''));
+      const wedLink=pic(p.weddingUrl)||pic(p.dwtUrl)||docs.length>0;
+      return pic(p.heroPhoto)
+          && a('venues').length
+          && priced
+          && pkgDoc
+          && wedLink
+          && a('roomCategories').length
+          && a('restaurants').length
+          && a('pools').length;
+    });
+  drawDests();draw();
+}).catch(e=>{document.getElementById('out').innerHTML='<p class="state">Could not load the library. '+esc(e.message)+'</p>';});
+</script>
+</body></html>
