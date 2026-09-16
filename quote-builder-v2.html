@@ -85,9 +85,9 @@ body{font-family:system-ui,sans-serif;background:#f5f2ed;color:#2a2218;min-heigh
       <div><label style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#B8A992;display:block;margin-bottom:5px;">First Name</label>
         <input id="am-first" placeholder="Amy" style="width:100%;padding:10px 14px;border:1.5px solid #E2D9CC;border-radius:10px;font-size:14px;outline:none;box-sizing:border-box;"></div>
       <div><label style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#B8A992;display:block;margin-bottom:5px;">Full Name</label>
-        <input id="am-full" placeholder="Amy M. Cate" style="width:100%;padding:10px 14px;border:1.5px solid #E2D9CC;border-radius:10px;font-size:14px;outline:none;box-sizing:border-box;"></div>
+        <input id="am-full" placeholder="Christopher Novosad" style="width:100%;padding:10px 14px;border:1.5px solid #E2D9CC;border-radius:10px;font-size:14px;outline:none;box-sizing:border-box;"></div>
       <div><label style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#B8A992;display:block;margin-bottom:5px;">Email</label>
-        <input id="am-email" placeholder="amy.cate@destinationweddings.com" style="width:100%;padding:10px 14px;border:1.5px solid #E2D9CC;border-radius:10px;font-size:14px;outline:none;box-sizing:border-box;"></div>
+        <input id="am-email" placeholder="cnovosad@destinationweddings.com" style="width:100%;padding:10px 14px;border:1.5px solid #E2D9CC;border-radius:10px;font-size:14px;outline:none;box-sizing:border-box;"></div>
       <div><label style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#B8A992;display:block;margin-bottom:5px;">Phone</label>
         <input id="am-phone" placeholder="(832) 773-8664" style="width:100%;padding:10px 14px;border:1.5px solid #E2D9CC;border-radius:10px;font-size:14px;outline:none;box-sizing:border-box;"></div>
     </div>
@@ -1028,8 +1028,8 @@ const qbStorage = firebase.storage();
 
 // ─── AGENT IDENTITY ────────────────────────────────────────
 const AGENT_DEFAULTS = {
-  first: 'Amy', full: 'Amy M. Cate',
-  email: 'amy.cate@destinationweddings.com', phone: '(832) 773-8664'
+  first: 'Amy', full: 'Christopher Novosad',
+  email: 'cnovosad@destinationweddings.com', phone: '(832) 773-8664'
 };
 function getAgent() {
   try {
@@ -2454,7 +2454,7 @@ function openGmailDraft(){
     ? ((allResorts.find(x=>x.slug===resortSel)||{}).name || '') : '');
   const first = (typeof agentVal === 'function') ? agentVal('first') : 'Amy';
   const sig = '\n\n' + first + '\n\n' +
-    (typeof agentVal==='function' ? agentVal('full') : 'Amy M. Cate') + '\n' +
+    (typeof agentVal==='function' ? agentVal('full') : 'Christopher Novosad') + '\n' +
     'Certified Destination Wedding Specialist\n' +
     (typeof agentVal==='function' ? agentVal('email') : '') + '\n' +
     (typeof agentVal==='function' ? agentVal('phone') : '');
