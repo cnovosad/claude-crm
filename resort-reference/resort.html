@@ -690,7 +690,6 @@ body.hasask{padding-bottom:78px;}
       <p class="hero-tag" id="hero-tag"></p>
       <p class="hero-meta" id="hero-dest"></p>
       <ul class="hero-chips" id="hero-chips"></ul>
-      <a class="workwith" href="https://work-with-amy-lead.netlify.app/" target="_blank" rel="noopener">What working with me looks like &rarr;</a>
       <a class="change-link" onclick="showPicker();return false;" href="#">↩ Change resort</a>
     </div>
     <img class="hero-photo" id="hero-img" src="" alt="">
@@ -983,7 +982,7 @@ if(window.CTMODE){
   document.querySelectorAll('a[href^="https://calendly.com/cnovosad-destinationweddings/30min"]').forEach(a=>{a.href=a.href.replace('cnovosad@destinationweddings.com','cnovosad@celebrationtravel.com');});
   const fp=document.querySelector('footer p');if(fp)fp.textContent='Christopher Novosad \u00b7 Celebration Travel';
   const pe=document.querySelector('#picker-screen .eyebrow');if(pe)pe.textContent='Christopher Novosad \u00b7 Celebration Travel';
-  const ww=document.querySelector('a.workwith');if(ww)ww.href='https://work-with-amy-ct.netlify.app/';
+  const ww=document.querySelector('a.workwith');if(ww)ww.href='';
 }
 function togglePkg(btn){const open=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!open);btn.nextElementSibling.classList.toggle('open',!open);}
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
