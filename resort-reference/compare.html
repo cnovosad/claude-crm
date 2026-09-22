@@ -35,8 +35,26 @@ firebase.auth().signInAnonymously().catch(e=>console.warn('Auth:',e));
     function locked(ref){
       try{return PROTECTED.test(ref.parent.id)&&!MINE.test(ref.id);}catch(e){return false;}
     }
-    DR.set=function(){return locked(this)?refused(this.parent.id+'/'+this.id):_set.apply(this,arguments);};
-    DR.update=function(){return locked(this)?refused(this.parent.id+'/'+this.id):_update.apply(this,arguments);};
+    // Quote links are the one thing he may add to Amy's resorts — each tagged as his.
+    function onlyQuotes(obj){
+      try{var k=Object.keys(obj||{});return k.length>0&&k.every(function(x){return x==='quoteLinks'||x.indexOf('quoteLinks.')===0;});}catch(e){return false;}
+    }
+    function tag(obj){
+      try{if(obj&&obj.quoteLinks&&typeof obj.quoteLinks==='object'){
+        Object.keys(obj.quoteLinks).forEach(function(id){var v=obj.quoteLinks[id];if(v&&typeof v==='object')v.by='christopher';});}}catch(e){}
+      return obj;
+    }
+    DR.set=function(data,opts){
+      if(!locked(this))return _set.apply(this,arguments);
+      if(this.parent.id==='resortProfiles'&&opts&&opts.merge&&onlyQuotes(data))return _set.call(this,tag(data),opts);
+      return refused(this.parent.id+'/'+this.id);
+    };
+    DR.update=function(data){
+      if(!locked(this))return _update.apply(this,arguments);
+      if(this.parent.id==='resortProfiles'&&data&&typeof data==='object'&&onlyQuotes(data))return _update.apply(this,arguments);
+      return refused(this.parent.id+'/'+this.id);
+    };
+    
     DR.delete=function(){return locked(this)?refused(this.parent.id+'/'+this.id):_delete.apply(this,arguments);};
     var CR=firebase.firestore.CollectionReference.prototype;
     var _add=CR.add;
