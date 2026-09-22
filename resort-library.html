@@ -1940,11 +1940,16 @@ var SECTION_SLOTS=[['pools','Pools & Beach'],['dining','Dining'],['venues','Venu
                    ['club','Club Level'],['groups','Groups']];
 
 async function canonicalSlug(p, slug){
-  var target=slug;
+  // Christopher's own copy always wins — never write to Amy's original by name
+  var MINE=/-chris(topher)?$/;
+  if(MINE.test(slug||'')) return slug;
   var nm=p.resortName||'';
-  if(nm){ var snap=await db.collection('resortProfiles').where('name','==',nm).limit(1).get();
-          if(!snap.empty) target=snap.docs[0].id; }
-  return target;
+  if(!nm) return slug;
+  var snap=await db.collection('resortProfiles').where('name','==',nm).get();
+  var ids=snap.docs.map(function(d){return d.id;});
+  var mine=ids.filter(function(id){return MINE.test(id);});
+  if(mine.length) return mine.find(function(id){return /-christopher$/.test(id);})||mine[0];
+  return ids[0]||slug;
 }
 
 async function renderSectionBtns(){
