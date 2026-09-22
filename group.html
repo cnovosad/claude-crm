@@ -376,16 +376,16 @@ async function init(){
 init();
 </script>
 <!-- READ-ONLY GUARD: Christopher can read Amy's resort library but never change it.
-     Anything whose id ends in -chris is his own and stays fully editable. -->
+     Anything whose id ends in -chris or -christopher is his own and stays fully editable. -->
 <script>
 (function(){
   try{
     if(!window.firebase||!firebase.firestore)return;
     var PROTECTED=/^(resortProfiles|resortPhotos|roomDescriptions)$/;
-    var MINE=/-chris$/;
+    var MINE=/-chris(topher)?$/;
     function refused(what){
       var msg='This belongs to Amy\u2019s library and is read-only here. '+
-              'Copy the resort to your own record first (its id must end in -chris).';
+              'Use \u201cCopy to my library\u201d first, then edit your copy.';
       try{if(window.toast)toast(msg,'error');else console.warn(msg);}catch(e){console.warn(msg);}
       return Promise.reject(new Error('Read-only: '+what));
     }
