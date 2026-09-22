@@ -662,6 +662,9 @@ body.hasask{padding-bottom:78px;}
 .price-grid.qrooms > .pcard .pic img.main{flex:1 1 auto;height:100%;min-height:300px;max-height:420px;object-fit:cover;}
 .price-grid.qrooms > .pcard .b{padding:28px 32px 30px;justify-content:center;}
 @media(max-width:760px){.price-grid.qrooms > .pcard{grid-template-columns:1fr;}.price-grid.qrooms > .pcard .pic img.main{min-height:220px;max-height:280px;}}
+
+/* section menu: two balanced rows rather than one long line */
+.qnav .inner{max-width:780px !important;margin:0 auto !important;}
 </style>
 </head>
 <body>
@@ -2859,7 +2862,8 @@ function buildQuoteNav(){
   nav.innerHTML='<div class="inner">'+secs.map(x=>{
     const h=x.querySelector('h2.display');
     const t=h?h.textContent.trim():'';
-    return '<a href="#'+x.id+'">'+esc(NAVLABEL[t]||t)+'</a>';
+    let lab=NAVLABEL[t]||t;if(lab.length>22)lab=lab.split(/[,\u2014\u2013:]/)[0].trim();
+    return '<a href="#'+x.id+'">'+esc(lab)+'</a>';
   }).join('')+'</div>';
   const anchor=qp.querySelector('.offers')||qp.querySelector('.travellers')||qp.querySelector('.fact-grid');
   if(anchor&&anchor.parentNode)anchor.parentNode.insertBefore(nav,anchor.nextSibling);
